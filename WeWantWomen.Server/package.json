@@ -1,0 +1,9 @@
+{
+  "name": "we-want-women.server",
+  "version": "0.0.0",
+  "description": "WeWantWomen.Server",
+  "main": "server.js",
+  "author": {
+    "name": "rfvin"
+  }
+}
