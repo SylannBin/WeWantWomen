@@ -26,6 +26,8 @@ $("#formation-form" ).on('click', function () { generateForm(getFormationJson); 
 $("#it-commons-form").on('click', function () { generateForm(getITCommonsJson);  category = "it-commons"; });
 $("#chart-form").on('click', function () { generateChart(); });
 
+$("#test-form").on('click', function () { testForm(); })
+
 $("#select-genre-m").on('click', function () { userGenre = "m"; });
 $("#select-genre-f").on('click', function () { userGenre = "f"; });
 $("#select-genre-n").on('click', function () { userGenre = "n"; });

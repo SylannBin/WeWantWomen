@@ -1,82 +1,107 @@
 {
     "employment": {
-        "count": 0,
+        "count": 7,
         "data": [
             {
-                "when": "2017-05-19 01:36:50",
+                "when": "2017-05-19 15:22:38",
+                "genre": "m",
                 "content": {
-                    "Question 1": {
-                        "text1": "ae",
-                        "text2": "azeraz",
-                        "text3": "erazer"
-                    },
-                    "Question 2": {
-                        "text1": "azer",
-                        "text2": "azeraz",
-                        "text3": "erazeraz"
-                    },
-                    "Question 3": "1",
-                    "Question 4": "1",
-                    "Question 5": {
-                        "text1": "azera",
-                        "text2": "zeraze",
-                        "text3": "razeaz",
-                        "text4": "er",
-                        "text5": "zerazer"
+                    "question1": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 0
+                    }
+                }
+            },
+            {
+                "when": "2017-05-19 15:22:42",
+                "genre": "m",
+                "content": {
+                    "question1": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 0
+                    }
+                }
+            },
+            {
+                "when": "2017-05-19 15:22:43",
+                "genre": "m",
+                "content": {
+                    "question1": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 0
+                    }
+                }
+            },
+            {
+                "when": "2017-05-19 15:22:43",
+                "genre": "m",
+                "content": {
+                    "question1": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 0
+                    }
+                }
+            },
+            {
+                "when": "2017-05-19 15:22:47",
+                "genre": "m",
+                "content": {
+                    "question1": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 0
+                    }
+                }
+            },
+            {
+                "when": "2017-05-19 15:22:48",
+                "genre": "m",
+                "content": {
+                    "question1": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 0
+                    }
+                }
+            },
+            {
+                "when": "2017-05-19 15:23:25",
+                "genre": "m",
+                "content": {
+                    "question1": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 0
                     }
                 }
             }
         ]
     },
-    "formation": {
-        "count": 0,
-        "data": [
-            {
-                "when": "2017-05-19 11:28:58",
-                "content": {
-                    "Question1": "1",
-                    "Question4": "1",
-                    "Question6": [
-                        "1",
-                        "2"
-                    ],
-                    "Question7": "1",
-                    "Question3": "qzejrnfQZMEUFKBMihfkhezmZFEYmzfekhybZMLIYEFHKMifyezlIAUEFZHLziuefZMFEIYzleiyfk"
-                }
-            }
-        ]
-    },
     "it-commons": {
-        "count": 1,
+        "count": 2,
         "data": [
             {
-                "when": "2017-05-19 11:29:57",
+                "when": "2017-05-19 15:23:39",
+                "genre": "f",
                 "content": {
-                    "G_question1": [
-                        "2"
-                    ],
-                    "G_question2": "1",
-                    "G_question3": "1",
-                    "G_question4": "2",
-                    "G_question5": "2",
-                    "G_question6": "qzefqzefmqzm",
-                    "G_question7": "2",
-                    "G_question8": "ssergùiqer^qgo"
+                    "question1": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 0
+                    }
                 }
             },
             {
-                "when": "2017-05-19 11:30:25",
+                "when": "2017-05-19 15:24:31",
+                "genre": "f",
                 "content": {
-                    "G_question1": [
-                        "4"
-                    ],
-                    "G_question2": "2",
-                    "G_question3": "2",
-                    "G_question4": "3",
-                    "G_question5": "3",
-                    "G_question6": "qerqze",
-                    "G_question7": "1",
-                    "G_question8": "qzergqzg"
+                    "question1": "qeurghqpirhhpqi",
+                    "question2": "qeurghqpirhhpqi",
+                    "question3": "qeurghqpirhhpqi",
+                    "question4": "qeurghqpirhhpqi",
+                    "block": {
+                        "check1": 1,
+                        "check2": 0,
+                        "check3": 1,
+                        "check4": 1,
+                        "check5": 0
+                    }
                 }
             }
         ]

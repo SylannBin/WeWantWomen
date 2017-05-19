@@ -16,6 +16,7 @@ module.exports = PostFormulaireAction;
 function PostFormulaireAction(req, res)
 {
   Helper.appLogger(`New ${req.body.formResponse.category} Form`);
+
   // Check existence of important data
   if (!req.body
     || !req.body.formResponse
