@@ -47,24 +47,5 @@ function testForm()
       check5: 0,
     }
   }
-  // object to string (+format for server request)
-  var body = JSON.stringify({
-    formResponse: {
-      category: category,
-      userGenre: userGenre,
-      content: surveyData
-    }
-  });
-
-
-  // Executes ajax call
-  $.ajax({
-    type: "POST",
-    url: "/formulaire",
-    contentType: "application/json",
-    dataType: "json",
-    data: body,
-    success: data => console.log("Success"),
-    error: data => console.log("Error")
-  });
+  sendForm();
 }
