@@ -28,9 +28,65 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DbManager.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helper.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\js\ajaxManager.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\js\formManager.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\js\lib\bootstrap.min.js" />
+    <Compile Include="public\js\lib\Chart.bundle.min.js" />
+    <Compile Include="public\js\chartManager.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\js\init.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="public\js\lib\jquery.min.js" />
+    <Compile Include="public\js\lib\survey.jquery.js" />
+    <Compile Include="public\js\lib\survey.jquery.min.js" />
+    <Compile Include="routes\Formulaire.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="routes\Index.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="server.js" />
     <Content Include="package.json" />
+    <Content Include="public\css\bootstrap-slate.min.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\css\bootstrap.min.css" />
+    <Content Include="public\css\bootstrap.min.css.map" />
+    <Content Include="public\css\main.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\css\survey.css" />
+    <Content Include="public\img\favicon.gif" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\img\grenoble.jpg" />
+    <Content Include="public\index.html" />
+    <Content Include="public\js\lib\jquery.min.map" />
     <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="routes\" />
+    <Folder Include="public\" />
+    <Folder Include="public\css\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\img\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\js\lib\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
