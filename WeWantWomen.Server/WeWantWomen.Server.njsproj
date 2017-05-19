@@ -4,6 +4,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <Name>WeWantWomen.Server</Name>
     <RootNamespace>WeWantWomen.Server</RootNamespace>
+    <NameOfLastUsedPublishProfile>filezilla</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -58,6 +59,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="server.js" />
+    <None Include="filezilla.pubxml" />
     <Content Include="package.json" />
     <Content Include="public\css\bootstrap-slate.min.css">
       <SubType>Code</SubType>
@@ -68,6 +70,8 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\css\survey.css" />
+    <Content Include="public\img\big-logo-yellow.png" />
+    <Content Include="public\img\big-logo-green.png" />
     <Content Include="public\img\favicon.gif" />
     <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
@@ -76,6 +80,9 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="public\img\grenoble.jpg" />
     <Content Include="public\index.html" />
+    <Content Include="public\css\bootstrap-flatly.min.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\js\lib\jquery.min.map" />
     <Content Include="README.md" />
   </ItemGroup>

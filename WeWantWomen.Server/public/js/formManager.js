@@ -37,6 +37,7 @@ function getEmploymentJson()
 {
   return {
     title: "Employabilité et rémunération",
+    name: "employment",
     pages: [
       {
         name: "page1",
@@ -166,6 +167,7 @@ function getFormationJson()
 {
   return {
     title: "Formation et orientation",
+    name: "formation",
     pages: [
       {
         name: "page1", questions: [
@@ -297,9 +299,11 @@ function getITCommonsJson()
 {
   return {
     title: "Généralités Informatiques",
+    name: "it_commons",
     pages: [
       {
-        name: "page1", questions: [
+        name: "page1",
+        questions: [
           {
             type: "checkbox",
             choices: [
@@ -322,7 +326,7 @@ function getITCommonsJson()
             ],
             choicesOrder: "random",
             isRequired: true,
-            name: "G_question1",
+            name: "Question1",
             title: "Quelle est votre vision de l'informatique ?"
           },
           {
@@ -339,7 +343,7 @@ function getITCommonsJson()
             ],
             choicesOrder: "random",
             isRequired: true,
-            name: "G_question2",
+            name: "Question2",
             title: "Pensez-vous que le traitement de l'information par le cerveau est différente selon si l'on est une femme ou un homme ?"
           },
           {
@@ -356,7 +360,7 @@ function getITCommonsJson()
             ],
             choicesOrder: "random",
             isRequired: true,
-            name: "G_question3",
+            name: "Question3",
             title: "Pensez-vous que le traitement de l'information par le cerveau est influencée par notre éducation ?"
           },
           {
@@ -377,7 +381,7 @@ function getITCommonsJson()
             ],
             choicesOrder: "random",
             isRequired: true,
-            name: "G_question4",
+            name: "Question4",
             title: "Selon vous, laquelle de ces définitions correspond le plus au terme 'geek' :"
           },
           {
@@ -414,12 +418,12 @@ function getITCommonsJson()
             ],
             choicesOrder: "random",
             isRequired: true,
-            name: "G_question5",
+            name: "Question5",
             title: "Votre enfant vous annonce qu'il souhaite se lancer dans des études d'informatique, quelle est votre réaction ?"
           },
           {
             type: "comment",
-            name: "G_question6",
+            name: "Question6",
             title: "Commentaire question précédente"
           },
           {
@@ -436,17 +440,15 @@ function getITCommonsJson()
             ],
             choicesOrder: "random",
             isRequired: true,
-            name: "G_question7",
+            name: "Question7",
             title: "Avez-vous déjà entendu parler des Moocs ? (OpenClassrooms, Digischool, etc) ?"
           },
           {
             type: "comment",
-            name: "G_question8",
+            name: "Question8",
             title: "De manière générale, comment voyez-vous l'informatique ? \nQuelle importance revêt-elle dans votre vie quotidienne ?"
           }
-        ],
-        name: "GénéralitésInformatique",
-        title: "Généralités sur l'informatique"
+        ]
       }
     ]
   };

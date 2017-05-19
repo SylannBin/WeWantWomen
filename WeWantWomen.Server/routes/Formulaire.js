@@ -20,7 +20,8 @@ function PostFormulaireAction(req, res)
   if (!req.body
     || !req.body.formResponse
     || !req.body.formResponse.category
-    || !req.body.formResponse.content)
+    || !req.body.formResponse.content
+    || !req.body.formResponse.userGenre)
   {
     Helper.appLogger(`Error: Invalid form`);
     res.status(403).json({ message: "Formulaire manquant ou invalide" });
@@ -36,6 +37,7 @@ function PostFormulaireAction(req, res)
   // Encapsulate data under store format
   var data = {
     when: Helper.timeStamp(),
+    genre: req.body.formResponse.userGenre,
     content: req.body.formResponse.content
   };
 

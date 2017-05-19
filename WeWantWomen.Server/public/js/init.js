@@ -17,11 +17,18 @@ var chartCanvas;
 // has to be one of [employment, formation, it-commons]
 var category;
 
+// Indicates the genre of the user
+var userGenre;
+
 // Init button events
 $("#employment-form").on('click', function () { generateForm(getEmploymentJson); category = "employment"; });
 $("#formation-form" ).on('click', function () { generateForm(getFormationJson);  category = "formation"; });
 $("#it-commons-form").on('click', function () { generateForm(getITCommonsJson);  category = "it-commons"; });
-$("#chart-form"     ).on('click', function () { generateChart(); });
+$("#chart-form").on('click', function () { generateChart(); });
+
+$("#select-genre-m").on('click', function () { userGenre = "m"; });
+$("#select-genre-f").on('click', function () { userGenre = "f"; });
+$("#select-genre-n").on('click', function () { userGenre = "n"; });
 
 // Navigation
 $(".nav li").on("click", function ()

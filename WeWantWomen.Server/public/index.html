@@ -19,14 +19,14 @@
   <script type="text/javascript" src="js/lib/Chart.Bundle.min.js"></script>
 
   <!-- Style sheets -->
-  <link href="css/bootstrap-slate.min.css" rel="stylesheet" />
+  <link href="css/bootstrap-flatly.min.css" rel="stylesheet" />
   <link href="css/survey.css" rel="stylesheet" />
   <link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Navigation bar -->
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavBar">
@@ -35,14 +35,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">We Want Women</a>
+        <a class="navbar-brand" href="index.html"><h1>We Want Women</h1></a>
       </div>
       <div class="navbar-collapse collapse" id="mainNavBar">
         <ul class="nav navbar-nav">
           <li><a href="#" id="employment-form">Employabilité et rémunération</a></li>
           <li><a href="#" id="formation-form">Formation et orientation</a></li>
           <li><a href="#" id="it-commons-form">Généralités Informatiques</a></li>
-          <li><a href="#" id="chart-form">Stats &amp; Graphs</a></li>
+          <!--<li><a href="#" id="chart-form">Stats &amp; Graphs</a></li>-->
         </ul>
       </div>
     </div>
@@ -51,9 +51,19 @@
   <!-- Main container -->
   <div id="main-container">
     <div class="presentation">
-      <h1>We Want Women !</h1>
+      <img class="logo" src="img/big-logo-green.png" alt="logo-woman" />
       <h4><strong>Bienvenue !</strong> Sélectionnez un des 3 formulaires dans le menu pour commencer à répondre aux questions.</h4>
-      <p>Vous pouvez aussi consulter les statistiques que nous avons accumuler avec les réponses précedentes.</p>
+      <p>Vous pouvez aussi consulter les statistiques que nous avons accumulé avec les réponses précedentes.</p>
+      <div class="col-sm-4">
+        <button id="select-genre-m" class="btn btn-primary genre-button">Je suis un Homme</button>
+      </div>
+      <div class="col-sm-4">
+        <button id="select-genre-f" class="btn btn-primary genre-button">Je suis une Femme</button>
+      </div>
+      <div class="col-sm-4">
+        <button id="select-genre-n" class="btn btn-primary genre-button">Je suis Neutre</button>
+      </div>
+      <p>Cette information reste annonyme</p>
     </div>
   </div>
 

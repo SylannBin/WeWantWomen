@@ -40,7 +40,7 @@ function getDatabase(fileName)
  */
 function getEntryCount(category)
 {
-  var count = 0;
+  var count = 1;
   try
   {
     count = db.getData(`/${category}/count`);
@@ -49,8 +49,8 @@ function getEntryCount(category)
   catch (e)
   {
     dbLogger(`Error: [${e.id}] ${e.message}`);
-    dbLogger("Action: Setting count to 0...");
-    db.push(`/${category}/count`, 0);
+    dbLogger("Action: Setting count to 1...");
+    db.push(`/${category}/count`, 1);
   }
   finally
   {

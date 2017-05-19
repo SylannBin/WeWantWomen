@@ -3,6 +3,7 @@
  *
  * @global {string} category
  * @global {jsonObject} survey
+ * @global {string} userGenre
  */
 function sendForm()
 {
@@ -10,6 +11,7 @@ function sendForm()
   var body = JSON.stringify({
     formResponse: {
       category: category,
+      genre: userGenre,
       content: surveyData
     }
   });
