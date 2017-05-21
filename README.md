@@ -1,9 +1,14 @@
 # WeWantWomen
 
+English
+--
+
 A little server made to serve forms containing questions about IT falsehoods, notably those related to women.
 Store user answers from send forms in a simplistic node-jsonDB file.
 
 Next part of this project is to add statistic functionnalities in order to work on the data that will be gathered.
+
+Français
 --
 
 Un petit server dont le but est de servir quelques questionnaires sur le sujet des idées reçues en informatique.
