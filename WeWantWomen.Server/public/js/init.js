@@ -23,7 +23,8 @@ var userGenre;
 // Init button events
 $("#employment-form").on('click', function () { generateForm(getEmploymentJson); category = "employment"; });
 $("#formation-form" ).on('click', function () { generateForm(getFormationJson);  category = "formation"; });
-$("#it-commons-form").on('click', function () { generateForm(getITCommonsJson);  category = "it-commons"; });
+$("#it-commons-form").on('click', function () { generateForm(getITCommonsJson); category = "it-commons"; });
+$("#it-knowledge-form").on('click', function () { generateForm(getITKnowledgeJson); category = "it-knowledge"; });
 $("#chart-form").on('click', function () { generateChart(); });
 
 $("#test-form").on('click', function () { testForm(); })
