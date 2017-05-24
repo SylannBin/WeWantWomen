@@ -496,7 +496,7 @@ function getITCommonsJson()
                 },
                 {
                     type: "rating",
-                    name: "question5",
+                    name: "question4",
                     title: "A votre avis, quelle est la répartition des emplois dans l'informatique ? (de la plus grande part à la plus petite)",
                     isRequired: true,
                     rateValues: [
@@ -516,7 +516,7 @@ function getITCommonsJson()
                 },
                 {
                     type: "radiogroup",
-                    name: "question6",
+                    name: "question5",
                     title: "Chaque année, de nombreuses offres d'emplois informatiques ne sont pas comblées par manque de candidats :",
                     isRequired: true,
                     choices: [
