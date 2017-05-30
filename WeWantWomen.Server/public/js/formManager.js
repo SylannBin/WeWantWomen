@@ -31,146 +31,459 @@ function generateForm(getFormFunction)
 
 /**
  * Returns the json object that corresponds to the form
- * "Employabilité et rémunération"
+ * "Généralités & Connaissances informatiques"
+ */
+function getITCommonsJson() {
+    return {
+        title: "Généralités & Connaissances Informatiques",
+        name: "it_commons",
+        pages: [
+            {
+                elements: [
+                    {
+                        type: "checkbox",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Essentielle"
+                            },
+                            {
+                                value: "2",
+                                text: "Optionnelle"
+                            },
+                            {
+                                value: "3",
+                                text: "Difficile"
+                            },
+                            {
+                                value: "4",
+                                text: "Inutile"
+                            },
+                            {
+                                value: "5",
+                                text: "Passionnante"
+                            },
+                            {
+                                value: "6",
+                                text: "Ne se prononce pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question1",
+                        title: "Quelle est votre vision de l'informatique de nos jours ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Un logiciel gratuit & modifiable"
+                            },
+                            {
+                                value: "2",
+                                text: "Un logiciel gratuit & non modifiable"
+                            },
+                            {
+                                value: "3",
+                                text: "Un logiciel payant & modifiable"
+                            },
+                            {
+                                value: "4",
+                                text: "Un logiciel payant & non modifiable"
+                            },
+                            {
+                                value: "5",
+                                text: "Ne sait pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question2",
+                        title: "Qu’est-ce qu’un logiciel libre ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Oui"
+                            },
+                            {
+                                value: "2",
+                                text: "Non"
+                            },
+                            {
+                                value: "3",
+                                text: "Ne se prononce pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question3",
+                        title: "Connaissez-vous des personnes travaillant dans le monde Informatique ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Des femmes"
+                            },
+                            {
+                                value: "2",
+                                text: "Des hommes"
+                            },
+                            {
+                                value: "3",
+                                text: "Les deux"
+                            },
+                            {
+                                value: "4",
+                                text: "Ne se prononce pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question4",
+                        title: "Ces personnes sont plutôt ?",
+                        visibleIf: " {question3} = '1'"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Un informaticien"
+                            },
+                            {
+                                value: "2",
+                                text: "Un hacker"
+                            },
+                            {
+                                value: "3",
+                                text: "Un fan de jeux vidéo "
+                            },
+                            {
+                                value: "4",
+                                text: "Une personne passionnée d'informatique, de cinéma, de technologies ..."
+                            },
+                            {
+                                value: "5",
+                                text: "Une personne refermée dans son monde"
+                            },
+                            {
+                                value: "6",
+                                text: "Ne se prononce pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question5",
+                        title: "D'après vous, qu'est-ce qu'un(e) geek ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "World Wireless Wifi "
+                            },
+                            {
+                                value: "2",
+                                text: "World Wide Web"
+                            },
+                            {
+                                value: "3",
+                                text: "Wireless Web Widget"
+                            },
+                            {
+                                value: "4",
+                                text: "Ne sait pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question6",
+                        title: "Que signifie les 3 lettres WWW ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Oui"
+                            },
+                            {
+                                value: "2",
+                                text: "Non"
+                            }
+                        ],
+                        isRequired: true,
+                        name: "question7",
+                        title: "Avez-vous déjà monté ou démonté un ordinateur ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Des femmes"
+                            },
+                            {
+                                value: "2",
+                                text: "Des hommes"
+                            },
+                            {
+                                value: "3",
+                                text: "Autant de femmes que d'hommes"
+                            },
+                            {
+                                value: "4",
+                                text: "Ne se prononce pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question8",
+                        title: "Diriez-vous que le monde Informatique est plutôt fréquenté par ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Un type de jeu à la mode"
+                            },
+                            {
+                                value: "2",
+                                text: "Un logiciel qui crypte vos informations jusqu'à ce que vous payiez une rançon"
+                            },
+                            {
+                                value: "3",
+                                text: "Une alerte enlèvement diffusée sur internet et par mail"
+                            },
+                            {
+                                value: "4",
+                                text: "Un moyen de communication entre les forces de police et les kidnappeurs"
+                            },
+                            {
+                                value: "5",
+                                text: "Ne sait pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question9",
+                        title: "Qu'est-ce qu'un RansomWare ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Des Pokemon de 6ème génération"
+                            },
+                            {
+                                value: "2",
+                                text: "Des langages de programmation informatique"
+                            },
+                            {
+                                value: "3",
+                                text: "Des logiciels de Windows"
+                            },
+                            {
+                                value: "4",
+                                text: "Des langages de cryptologie utilisés en sécurité informatique"
+                            },
+                            {
+                                value: "5",
+                                text: "Ne sait pas"
+                            }
+                        ],
+                        choicesOrder: "random",
+                        isRequired: true,
+                        name: "question10",
+                        title: "Que sont HTML, JAVA, PYTHON, PHP ou C# ?"
+                    }
+                ],
+                name: "it_commons"
+            }
+        ]
+    };
+} 
+
+/**
+ * Returns the json object that corresponds to the form
+ * "Employabilité & Rémunération"
  */
 function getEmploymentJson()
 {
   return {
-    title: "Employabilité et rémunération",
+    title: "Employabilité & Rémunération",
     name: "employment",
-    pages: [
-      {
-        name: "page1",
-        questions: [
-          {
-            type: "multipletext",
-            items: [
-              {
-                name: "text1",
-                title: "Difficulté 1"
-              },
-              {
-                name: "text2",
-                title: "Difficulté 2"
-              },
-              {
-                name: "text3",
-                title: "Difficulté 3"
-              }
-            ],
-            name: "Question 1",
-            title: "Quels sont les freins à l’embauche des femmes dans l’informatique ?"
-          },
-          {
-            type: "multipletext",
-            items: [
-              {
-                name: "text1",
-                title: "Qualité 1"
-              },
-              {
-                name: "text2",
-                title: "Qualité 2"
-              },
-              {
-                name: "text3",
-                title: "Qualité 3"
-              }
-            ],
-            name: "Question 2",
-            title: "Quelles sont les qualités d’un informaticien ?"
-          },
-          {
-            type: "radiogroup",
-            choices: [
-              {
-                value: "1",
-                text: "Marine 25 ans dev web"
-              },
-              {
-                value: "2",
-                text: "Ismaël 32 ans admin réseau"
-              },
-              {
-                value: "3",
-                text: "Marcel 53 ans spécialiste cybersécurité"
-              },
-              {
-                value: "4",
-                text: "Mathilda 38 ans spécialiste base de données"
-              }
-            ],
-            name: "Question 3",
-            title: "Quelle personne a le plus de chances d’être promue ?"
-          },
-          {
-            type: "radiogroup",
-            choices: [
-              {
-                value: "1",
-                text: "Moins de 20 000 €"
-              },
-              {
-                value: "2",
-                text: "Entre 20 000 € et 30 000 €"
-              },
-              {
-                value: "3",
-                text: "Entre 30 000 € et 40 000 €"
-              },
-              {
-                value: "4",
-                text: "Plus de 40 000 €"
-              }
-            ],
-            name: "Question 4",
-            title: "A votre avis quel est le niveau de rémunération d’un bac+5 école d’ingénieur à la sortie de l’école ?"
-          },
-          {
-            type: "multipletext",
-            items: [
-              {
-                name: "text1",
-                title: "Métier 1"
-              },
-              {
-                name: "text2",
-                title: "Métier 2"
-              },
-              {
-                name: "text3",
-                title: "Métier 3"
-              },
-              {
-                name: "text4",
-                title: "Métier 4"
-              },
-              {
-                name: "text5",
-                title: "Métier 5"
-              }
-            ],
-            name: "Question 5",
-            title: "Citez 6 métiers en lien avec l’informatique :"
-          }
-        ]
-      }
-    ]
-  };
-}
-
-/**
- * Returns the json object that corresponds to the form
- * "Formation et orientation"
- */
-function getFormationJson()
-{
-  return {
-    title: "Formation et orientation",
-    name: "formation",
     pages: [
         {
             elements: [
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "+ de 50 000"
+                        },
+                        {
+                            value: "2",
+                            text: "+ de 12 000"
+                        },
+                        {
+                            value: "3",
+                            text: "+ de 190 000"
+                        },
+                        {
+                            value: "4",
+                            text: "+ de 5000"
+                        },
+                        {
+                            value: "5",
+                            text: "Ne sait pas"
+                        }
+                    ],
+                    choicesOrder: "random",
+                    isRequired: true,
+                    name: "question1",
+                    title: "D'ici à 2022, combien de postes d'informaticiens seront créés chaque année selon vous ?"
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Pas qualifiés (Ouvriers) - Moyennement qualifiés (Techniciens) - Très qualifiés (Ingénieurs)"
+                        },
+                        {
+                            value: "2",
+                            text: "Très qualifiés (Ingénieurs) - Moyennement qualifiés (Techniciens) - Pas qualifiés (Ouvriers)"
+                        },
+                        {
+                            value: "3",
+                            text: "Moyennement qualifiés (Techniciens) - Pas qualifiés (Ouvriers) - Très qualifiés (Ingénieurs)"
+                        },
+                        {
+                            value: "4",
+                            text: "Ne se prononce pas"
+                        }
+                    ],
+                    isRequired: true,
+                    name: "question2",
+                    title: "A votre avis, quelle est la répartition des emplois dans l'informatique ? (de la plus grande part à la plus petite) ?"
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "25%"
+                        },
+                        {
+                            value: "2",
+                            text: "17%"
+                        },
+                        {
+                            value: "3",
+                            text: "8%"
+                        },
+                        {
+                            value: "4",
+                            text: "33%"
+                        },
+                        {
+                            value: "5",
+                            text: "Ne sait pas"
+                        }
+                    ],
+                    choicesOrder: "random",
+                    isRequired: true,
+                    name: "question3",
+                    title: "Comment imaginez-vous la proportion de femmes dans les postes de cadres informatique ?"
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Augmentation"
+                        },
+                        {
+                            value: "2",
+                            text: "Stagnation"
+                        },
+                        {
+                            value: "3",
+                            text: "Diminution"
+                        },
+                        {
+                            value: "4",
+                            text: "Ne sait pas"
+                        }
+                    ],
+                    choicesOrder: "random",
+                    isRequired: true,
+                    name: "question4",
+                    title: "Dans quel sens pensez-vous que ce chiffre évolue ?"
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Moins de 20 000€"
+                        },
+                        {
+                            value: "2",
+                            text: "Entre 20 000€ et 30 000€"
+                        },
+                        {
+                            value: "3",
+                            text: "Entre 30 000€ et 40 000€"
+                        },
+                        {
+                            value: "4",
+                            text: "Plus de 40 000€"
+                        },
+                        {
+                            value: "5",
+                            text: "Ne sait pas"
+                        }
+                    ],
+                    isRequired: true,
+                    name: "question5",
+                    title: "A votre avis, quel est le niveau de rémunération d’un bac +5 école d’ingénieur à la sortie de l’école ? "
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Plus grand"
+                        },
+                        {
+                            value: "2",
+                            text: "Identique"
+                        },
+                        {
+                            value: "3",
+                            text: "Plus faible"
+                        },
+                        {
+                            value: "4",
+                            text: "Ne se prononce pas"
+                        }
+                    ],
+                    isRequired: true,
+                    name: "question6",
+                    title: "En comparaison avec d'autres domaines, imaginez-vous que l'écart de salaire Hommes/Femmes dans le monde Informatique est ?"
+                },
                 {
                     type: "radiogroup",
                     choices: [
@@ -181,11 +494,184 @@ function getFormationJson()
                         {
                             value: "2",
                             text: "Non"
+                        },
+                        {
+                            value: "3",
+                            text: "Ne se prononce pas"
                         }
                     ],
-                    choicesOrder: "asc",
+                    isRequired: true,
+                    name: "question7",
+                    title: "Pour un poste de cadre dans le milieu informatique et à compétences équivalentes, pensez-vous qu’une femme a autant de chances d’être engagé  qu’un homme ?"
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Oui"
+                        },
+                        {
+                            value: "2",
+                            text: "Non"
+                        },
+                        {
+                            value: "3",
+                            text: "Ne se prononce pas"
+                        }
+                    ],
+                    isRequired: true,
+                    name: "question8",
+                    title: "Selon vous pour des raisons liées au domaine informatique ?",
+                    visible: false,
+                    visibleIf: " {question6} = '2'"
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Médical"
+                        },
+                        {
+                            value: "2",
+                            text: "Informatique"
+                        },
+                        {
+                            value: "3",
+                            text: "Industriel"
+                        },
+                        {
+                            value: "4",
+                            text: "Commercial"
+                        },
+                        {
+                            value: "5",
+                            text: "Autre"
+                        },
+                        {
+                            value: "6",
+                            text: "Ne se prononce pas"
+                        }
+                    ],
+                    isRequired: true,
+                    name: "question9",
+                    title: "A votre avis, quel est le secteur qui offre a ce jour le plus d’employabilité ?"
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Vrai"
+                        },
+                        {
+                            value: "2",
+                            text: "Faux"
+                        },
+                        {
+                            value: "3",
+                            text: "Ne sait pas"
+                        }
+                    ],
+                    isRequired: true,
+                    name: "question10",
+                    title: "Chaque année, de nombreuses offres d'emplois informatiques ne sont pas comblées par manque de candidats ?"
+                }
+            ],
+            name: "employment"
+        }
+    ]
+  };
+}
+
+/**
+ * Returns the json object that corresponds to the form
+ * "Formation & Orientation"
+ */
+function getFormationJson()
+{
+  return {
+    title: "Formation et orientation",
+    name: "formation",
+    pages: [
+        {
+            elements: [
+                {
+                    type: "checkbox",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Rigueur"
+                        },
+                        {
+                            value: "2",
+                            text: "Capacité d'analyse"
+                        },
+                        {
+                            value: "3",
+                            text: "Logique"
+                        },
+                        {
+                            value: "4",
+                            text: "Introvertision"
+                        },
+                        {
+                            value: "5",
+                            text: "Curiosité"
+                        },
+                        {
+                            value: "6",
+                            text: "Bonne organisation"
+                        },
+                        {
+                            value: "7",
+                            text: "Perseverance"
+                        },
+                        {
+                            value: "8",
+                            text: "Réactivité"
+                        },
+                        {
+                            value: "9",
+                            text: "Etre Anglophone"
+                        },
+                        {
+                            value: "10",
+                            text: "Individualiste"
+                        },
+                        {
+                            value: "11",
+                            text: "Créativité"
+                        },
+                        {
+                            value: "12",
+                            text: "Autre"
+                        }
+                    ],
+                    colCount: 3,
                     isRequired: true,
                     name: "question1",
+                    title: "Selon vous, quelle(s) qualité(s) est utile à l’informaticien(ne) ?"
+                },
+                {
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Oui"
+                        },
+                        {
+                            value: "2",
+                            text: "Non"
+                        },
+                        {
+                            value: "3",
+                            text: "Ne se prononce pas"
+                        }
+                    ],
+                    isRequired: true,
+                    name: "question2",
                     title: "Réfléchissez-vous actuellement à votre orientation d'études ? (Poursuite ou reprise)"
                 },
                 {
@@ -208,24 +694,74 @@ function getFormationJson()
                             text: "Informatique"
                         },
                         {
+                            value: "6",
+                            text: "Droit / Justice"
+                        },
+                        {
                             value: "5",
                             text: "Autre"
                         },
                         {
-                            value: "6",
-                            text: "Droit / Justice"
+                            value: "7",
+                            text: "Ne se prononce pas"
                         }
                     ],
-                    choicesOrder: "random",
-                    name: "question2",
+                    colCount: 2,
+                    isRequired: true,
+                    name: "question3",
                     title: "Quels sont les domaines d'études qui vous intéressent ?",
-                    visibleIf: "{question1} = '1'"
+                    visible: false,
+                    visibleIf: "{question2} = '1'"
+                },
+                {
+                    type: "checkbox",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Questionnement sur formation"
+                        },
+                        {
+                            value: "2",
+                            text: "Questionnement sur employabilité"
+                        },
+                        {
+                            value: "3",
+                            text: "Questionnement sur rémunération"
+                        },
+                        {
+                            value: "4",
+                            text: "Hésitation avec autre domaines"
+                        },
+                        {
+                            value: "5",
+                            text: "Monde trop masculin"
+                        },
+                        {
+                            value: "6",
+                            text: "Pas les capacités"
+                        },
+                        {
+                            value: "7",
+                            text: "Autre"
+                        },
+                        {
+                            value: "8",
+                            text: "Ne se prononce pas"
+                        }
+                    ],
+                    colCount: 2,
+                    name: "question4",
+                    title: "Si votre choix n'est pas définitif, pour quelles raisons hésitez-vous encore ?",
+                    visible: false,
+                    visibleIf: " {question3} = '4'"
                 },
                 {
                     type: "comment",
-                    name: "question3",
-                    title: "Si votre choix n'est pas définitif, pour quelles raisons hésitez-vous encore ?",
-                    visibleIf: " {question2} = '4'"
+                    name: "question5",
+                    rows: "2",
+                    title: "Précisez si vous le souhaitez",
+                    visible: false,
+                    visibleIf: " {question4} = '7'"
                 },
                 {
                     type: "radiogroup",
@@ -237,17 +773,58 @@ function getFormationJson()
                         {
                             value: "2",
                             text: "Non"
+                        },
+                        {
+                            value: "3",
+                            text: "Ne se souvient pas"
                         }
                     ],
                     isRequired: true,
-                    name: "question4",
-                    title: "Les filières informatiques vous ont-elles été présentées et proposées pour votre parcours de formation ? "
+                    name: "question6",
+                    title: "Les filières informatiques vous ont-elles été présentées et proposées lors de votre parcours de formation ? "
+                },
+                {
+                    type: "checkbox",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Manque d'avenir de la filière"
+                        },
+                        {
+                            value: "2",
+                            text: "Monde masculin"
+                        },
+                        {
+                            value: "3",
+                            text: "Domaine trop compliqué"
+                        },
+                        {
+                            value: "4",
+                            text: "Orientation qui ne vous convient pas"
+                        },
+                        {
+                            value: "5",
+                            text: "Autre"
+                        },
+                        {
+                            value: "6",
+                            text: "Ne se souvient pas"
+                        }
+                    ],
+                    colCount: 2,
+                    isRequired: true,
+                    name: "question7",
+                    title: "Savez-vous pour quelles raisons ?",
+                    visible: false,
+                    visibleIf: " {question6} = '2'"
                 },
                 {
                     type: "comment",
-                    name: "question5",
-                    title: "Savez-vous pour quelles raisons ?",
-                    visibleIf: " {question4} = '2'"
+                    name: "question8",
+                    rows: "2",
+                    title: "Précisez si vous le souhaitez",
+                    visible: false,
+                    visibleIf: " {question7} = '5'"
                 },
                 {
                     type: "checkbox",
@@ -274,19 +851,38 @@ function getFormationJson()
                         },
                         {
                             value: "6",
+                            text: "Avenir"
+                        },
+                        {
+                            value: "7",
                             text: "Autre"
+                        },
+                        {
+                            value: "8",
+                            text: "Ne se souvient pas"
                         }
                     ],
+                    colCount: 2,
                     isRequired: true,
-                    name: "question6",
+                    name: "question9",
                     title: "Quels arguments et bénéfices à propos de ces filières ont été mis en avant lorsqu'on vous les as présentés ?",
-                    visibleIf: " {question4} = '1'"
+                    visible: false,
+                    visibleIf: " {question6} = '1'"
                 },
                 {
                     type: "comment",
-                    name: "question7",
-                    title: "Précisez",
-                    visibleIf: " {question6} = '6'"
+                    name: "question10",
+                    rows: "2",
+                    title: "Précisez si vous le souhaitez",
+                    visible: false,
+                    visibleIf: " {question9} = '7'"
+                },
+                {
+                    type: "comment",
+                    name: "question16",
+                    title: "Précisez si vous le souhaitez",
+                    visible: false,
+                    visibleIf: " {question9} = '7'"
                 },
                 {
                     type: "checkbox",
@@ -322,13 +918,27 @@ function getFormationJson()
                         {
                             value: "8",
                             text: "Passion"
+                        },
+                        {
+                            value: "9",
+                            text: "Autre"
+                        },
+                        {
+                            value: "10",
+                            text: "Ne sait pas"
                         }
                     ],
-                    choicesOrder: "random",
                     colCount: 2,
                     isRequired: true,
-                    name: "question8",
+                    name: "question11",
                     title: "A votre avis, quelles sont les disciplines ou compétences qui vous semblent indispensables pour réussir en informatique ?"
+                },
+                {
+                    type: "comment",
+                    name: "question12",
+                    rows: "2",
+                    title: "Précisez si vous le souhaitez",
+                    visibleIf: "{question11} = '9'"
                 },
                 {
                     type: "radiogroup",
@@ -343,7 +953,7 @@ function getFormationJson()
                         }
                     ],
                     isRequired: true,
-                    name: "question9",
+                    name: "question12",
                     title: "Avez-vous l'impression que les études et les métiers de l'informatique ont une bonne 'côte' aujourd'hui ?"
                 },
                 {
@@ -363,7 +973,7 @@ function getFormationJson()
                         }
                     ],
                     isRequired: true,
-                    name: "question10",
+                    name: "question13",
                     title: "Dans quel sens diriez-vous que cette image a évoluée ?"
                 },
                 {
@@ -383,17 +993,18 @@ function getFormationJson()
                         }
                     ],
                     isRequired: true,
-                    name: "question11",
+                    name: "question14",
                     title: "Comment imaginez-vous la répartition dans les classes d'écoles informatiques ?"
                 },
                 {
                     type: "comment",
-                    name: "question12",
+                    name: "question15",
+                    rows: "2",
                     title: "A votre avis, pourquoi ? ",
-                    visibleIf: "{question11} < 3"
+                    visibleIf: "{question14} < 3"
                 }
             ],
-            name: "page1"
+            name: "formation"
         }
     ]
   };
@@ -401,498 +1012,173 @@ function getFormationJson()
 
 /**
  * Returns the json object that corresponds to the form
- * "Généralités informatiques"
+ * "Les Femmes & l'Informatique"
  */
-function getITCommonsJson()
-{
-  return {
-    title: "Généralités Informatiques",
-    name: "it_commons",
-    pages: [
-        {
-            elements: [
-                {
-                    type: "radiogroup",
-                    name: "question1",
-                    title: "Quelle est votre vision de l’informatique ?",
-                    isRequired: true,
-                    choices: [
-                        {
-                            value: "1",
-                            text: "Inutile"
-                        },
-                        {
-                            value: "2",
-                            text: "Passionnante"
-                        },
-                        {
-                            value: "3",
-                            text: "Difficile"
-                        },
-                        {
-                            value: "4",
-                            text: "Optionnelle"
-                        },
-                        {
-                            value: "5",
-                            text: "Essentielle"
-                        }
-                    ],
-                    choicesOrder: "random"
-                },
-                {
-                    type: "radiogroup",
-                    name: "question2",
-                    title: "D'après vous, qu'est-ce qu'un geek ?",
-                    isRequired: true,
-                    choices: [
-                        {
-                            value: "1",
-                            text: "Une personne passionnée d'informatique, de cinéma, de technologies ..."
-                        },
-                        {
-                            value: "2",
-                            text: "Un développeur"
-                        },
-                        {
-                            value: "3",
-                            text: "Un informaticien"
-                        },
-                        {
-                            value: "4",
-                            text: "Un e-sportif"
-                        },
-                        {
-                            value: "5",
-                            text: "Un hacker"
-                        }
-                    ],
-                    choicesOrder: "random"
-                },
-                {
-                    type: "radiogroup",
-                    name: "question3",
-                    title: "D'ici à 2022, combien de postes d'informaticiens seront créés chaque année selon vous ?",
-                    isRequired: true,
-                    choices: [
-                        {
-                            value: "1",
-                            text: "50000"
-                        },
-                        {
-                            value: "2",
-                            text: "12500"
-                        },
-                        {
-                            value: "3",
-                            text: "191000"
-                        },
-                        {
-                            value: "4",
-                            text: "7000"
-                        }
-                    ],
-                    choicesOrder: "random"
-                },
-                {
-                    type: "rating",
-                    name: "question4",
-                    title: "A votre avis, quelle est la répartition des emplois dans l'informatique ? (de la plus grande part à la plus petite)",
-                    isRequired: true,
-                    rateValues: [
-                        {
-                            value: "1",
-                            text: "Pas qualifiés (Ouvriers) - Moyennement qualifiés (Techniciens) - Très qualifiés (Ingénieurs)"
-                        },
-                        {
-                            value: "2",
-                            text: "Très qualifiés (Ingénieurs) - Moyennement qualifiés (Techniciens) - Pas qualifiés (Ouvriers)"
-                        },
-                        {
-                            value: "3",
-                            text: "Moyennement qualifiés (Techniciens) - Pas qualifiés (Ouvriers) - Très qualifiés (Ingénieurs)"
-                        }
-                    ]
-                },
-                {
-                    type: "radiogroup",
-                    name: "question5",
-                    title: "Chaque année, de nombreuses offres d'emplois informatiques ne sont pas comblées par manque de candidats :",
-                    isRequired: true,
-                    choices: [
-                        {
-                            value: "1",
-                            text: "Faux"
-                        },
-                        {
-                            value: "2",
-                            text: "Vrai"
-                        }
-                    ],
-                    choicesOrder: "random"
-                },
-                {
-                    type: "radiogroup",
-                    name: "question6",
-                    title: "Comment imaginez-vous la proportion de femmes dans les postes de cadres informatique ?",
-                    isRequired: true,
-                    choices: [
-                        {
-                            value: "1",
-                            text: "25%"
-                        },
-                        {
-                            value: "2",
-                            text: "17%"
-                        },
-                        {
-                            value: "3",
-                            text: "8%"
-                        },
-                        {
-                            value: "4",
-                            text: "33%"
-                        }
-                    ],
-                    choicesOrder: "random"
-                },
-                {
-                    type: "radiogroup",
-                    name: "question7",
-                    title: "Dans quel sens pensez-vous que ce chiffre évolue ?",
-                    isRequired: true,
-                    choices: [
-                        {
-                            value: "1",
-                            text: "Diminution"
-                        },
-                        {
-                            value: "2",
-                            text: "Stagnation"
-                        },
-                        {
-                            value: "3",
-                            text: "Augmentation"
-                        }
-                    ],
-                    choicesOrder: "asc"
-                },
-                {
-                    type: "panel",
-                    name: "reaction1",
-                    elements: [
-                        {
-                            type: "rating",
-                            name: "question8",
-                            title: "Votre enfant veut se lancer dans l’informatique. Comment réagissez-vous ? ",
-                            isRequired: true,
-                            rateValues: [
-                                "1",
-                                "2",
-                                "3",
-                                "4",
-                                "5",
-                                "6",
-                                "7",
-                                "8",
-                                "9",
-                                "10"
-                            ],
-                            minRateDescription: "Mal",
-                            maxRateDescription: "Bien"
-                        },
-                        {
-                            type: "comment",
-                            name: "question9",
-                            title: "Commentaire :",
-                            isRequired: true
-                        }
-                    ],
-                    title: "Réaction"
-                },
-                {
-                    type: "radiogroup",
-                    name: "question10",
-                    title: "Quelle est la marque de votre ordinateur ? ",
-                    isRequired: true,
-                    choices: [
-                        {
-                            value: "1",
-                            text: "Apple"
-                        },
-                        {
-                            value: "2",
-                            text: "Dell"
-                        },
-                        {
-                            value: "3",
-                            text: "Toshiba"
-                        },
-                        {
-                            value: "4",
-                            text: "Asus"
-                        },
-                        {
-                            value: "5",
-                            text: "Hewlett Packard (HP)"
-                        },
-                        {
-                            value: "6",
-                            text: "Lenovo"
-                        },
-                        {
-                            value: "7",
-                            text: "MSI"
-                        },
-                        {
-                            value: "8",
-                            text: "Microsoft (surface...)"
-                        },
-                        {
-                            value: "9",
-                            text: "Sony (Vaio...)"
-                        },
-                        {
-                            value: "10",
-                            text: "Acer"
-                        },
-                        {
-                            value: "11",
-                            text: "PC Monté"
-                        },
-                        {
-                            value: "12",
-                            text: "Autre"
-                        }
-                    ],
-                    choicesOrder: "random",
-                    colCount: 4
-                },
-                {
-                    type: "radiogroup",
-                    name: "question11",
-                    title: "Quelle est la marque de votre smartphone ? ",
-                    isRequired: true,
-                    choices: [
-                        {
-                            value: "1",
-                            text: "Apple"
-                        },
-                        {
-                            value: "2",
-                            text: "Asus"
-                        },
-                        {
-                            value: "3",
-                            text: "Microsoft"
-                        },
-                        {
-                            value: "4",
-                            text: "Sony"
-                        },
-                        {
-                            value: "5",
-                            text: "Samsung"
-                        },
-                        {
-                            value: "6",
-                            text: "HTC"
-                        },
-                        {
-                            value: "7",
-                            text: "One Plus"
-                        },
-                        {
-                            value: "8",
-                            text: "Autre"
-                        }
-                    ],
-                    choicesOrder: "random",
-                    colCount: 2
-                }
-            ]
-        }
-    ]
-  };
-}
-
-/**
- * Returns the json object that corresponds to the form
- * "Connaissances informatiques"
- */
-function getITKnowledgeJson() {
- return {
-        title: "Connaissances Informatiques",
-        name: "it_knowledge",
+function getWomenJson() {
+    return {
+        title: "Les Femmes & l'Informatique",
+        name: "women",
         pages: [
             {
-                name: "page1",
                 elements: [
                     {
                         type: "radiogroup",
                         choices: [
                             {
                                 value: "1",
-                                text: "Internet Explorer"
+                                text: "Oui"
                             },
                             {
                                 value: "2",
-                                text: "Google"
-                            },
-                            {
-                                value: "3",
-                                text: "Firefox"
-                            },
-                            {
-                                value: "4",
-                                text: "Safari"
+                                text: "Non"
                             }
                         ],
-                        choicesOrder: "random",
+                        choicesOrder: "asc",
                         isRequired: true,
                         name: "question1",
-                        title: "Parmi les choix suivant lequel n'est pas un navigateur web ?"
-                    },
-                    {
-                        type: "radiogroup",
-                        choices: [
-                            {
-                                value: "1",
-                                text: "Un logiciel gratuit & modifiable"
-                            },
-                            {
-                                value: "2",
-                                text: "Un logiciel gratuit & non modifiable"
-                            },
-                            {
-                                value: "3",
-                                text: "Un logiciel payant & modifiable"
-                            },
-                            {
-                                value: "4",
-                                text: "Un logiciel payant & non modifiable"
-                            }
-                        ],
-                        choicesOrder: "random",
-                        isRequired: true,
-                        name: "question2",
-                        title: "Qu’est-ce qu’un logiciel libre ?"
+                        title: "Réfléchissez-vous actuellement à votre orientation d'études ? (Poursuite ou reprise)"
                     },
                     {
                         type: "checkbox",
                         choices: [
                             {
                                 value: "1",
-                                text: "Ubuntu"
+                                text: "Santé / Médical"
                             },
                             {
                                 value: "2",
-                                text: "Chromium"
+                                text: "Sciences"
                             },
                             {
                                 value: "3",
-                                text: "Mac OS"
+                                text: "Commerce & Management"
                             },
                             {
                                 value: "4",
-                                text: "Android"
+                                text: "Informatique"
                             },
                             {
                                 value: "5",
-                                text: "Yenop"
+                                text: "Autre"
+                            },
+                            {
+                                value: "6",
+                                text: "Droit / Justice"
                             }
                         ],
                         choicesOrder: "random",
-                        isRequired: true,
+                        name: "question2",
+                        title: "Quels sont les domaines d'études qui vous intéressent ?",
+                        visibleIf: "{question1} = '1'"
+                    },
+                    {
+                        type: "comment",
                         name: "question3",
-                        title: "Parmi les choix suivant, sélectionnez les systèmes d'exploitation :"
+                        title: "Si votre choix n'est pas définitif, pour quelles raisons hésitez-vous encore ?",
+                        visibleIf: " {question2} = '4'"
                     },
                     {
                         type: "radiogroup",
                         choices: [
                             {
                                 value: "1",
-                                text: "World Wireless Wifi "
+                                text: "Oui"
                             },
                             {
                                 value: "2",
-                                text: "World Wide Web"
-                            },
-                            {
-                                value: "3",
-                                text: "Wireless Web Widget"
+                                text: "Non"
                             }
                         ],
-                        choicesOrder: "random",
                         isRequired: true,
                         name: "question4",
-                        title: "Que signifie les 3 lettres WWW ?"
+                        title: "Les filières informatiques vous ont-elles été présentées et proposées pour votre parcours de formation ? "
                     },
                     {
-                        type: "radiogroup",
-                        choices: [
-                            {
-                                value: "1",
-                                text: "Oui"
-                            },
-                            {
-                                value: "2",
-                                text: "Non"
-                            }
-                        ],
-                        isRequired: true,
+                        type: "comment",
                         name: "question5",
-                        title: "Avez-vous déjà monté ou démonté un ordinateur ?"
+                        title: "Savez-vous pour quelles raisons ?",
+                        visibleIf: " {question4} = '2'"
                     },
                     {
-                        type: "radiogroup",
+                        type: "checkbox",
                         choices: [
                             {
                                 value: "1",
-                                text: "Un type de jeu à la mode"
+                                text: "Employabilité"
                             },
                             {
                                 value: "2",
-                                text: "Un logiciel qui crypte vos informations jusqu'à ce que vous payiez une rançon"
+                                text: "Rémunération"
                             },
                             {
                                 value: "3",
-                                text: "Une alerte enlèvement diffusée sur internet et par mail"
+                                text: "Evolution"
                             },
                             {
                                 value: "4",
-                                text: "Un moyen de communication entre les forces de police et les kidnappeurs"
+                                text: "Autonomie"
+                            },
+                            {
+                                value: "5",
+                                text: "Passion"
+                            },
+                            {
+                                value: "6",
+                                text: "Autre"
                             }
                         ],
-                        choicesOrder: "random",
                         isRequired: true,
                         name: "question6",
-                        title: "Qu'est-ce qu'un RansomWare ?"
+                        title: "Quels arguments et bénéfices à propos de ces filières ont été mis en avant lorsqu'on vous les as présentés ?",
+                        visibleIf: " {question4} = '1'"
                     },
                     {
-                        type: "radiogroup",
+                        type: "comment",
+                        name: "question7",
+                        title: "Précisez",
+                        visibleIf: " {question6} = '6'"
+                    },
+                    {
+                        type: "checkbox",
                         choices: [
                             {
                                 value: "1",
-                                text: "Des Pokemon de 6ème génération"
+                                text: "Mathématiques"
                             },
                             {
                                 value: "2",
-                                text: "Des langages de programmation informatique"
+                                text: "Logique"
                             },
                             {
                                 value: "3",
-                                text: "Des logiciels de Windows"
+                                text: "Francais"
                             },
                             {
                                 value: "4",
-                                text: "Des langages de cryptologie utilisés en sécurité informatique"
+                                text: "Droit"
+                            },
+                            {
+                                value: "5",
+                                text: "Anglais"
+                            },
+                            {
+                                value: "6",
+                                text: "Economie"
+                            },
+                            {
+                                value: "7",
+                                text: "Curiosité"
+                            },
+                            {
+                                value: "8",
+                                text: "Passion"
                             }
                         ],
                         choicesOrder: "random",
+                        colCount: 2,
                         isRequired: true,
-                        name: "question7",
-                        title: "Que sont HTML, JAVA, PYTHON, PHP ou C# ?"
+                        name: "question8",
+                        title: "A votre avis, quelles sont les disciplines ou compétences qui vous semblent indispensables pour réussir en informatique ?"
                     },
                     {
                         type: "radiogroup",
@@ -907,59 +1193,58 @@ function getITKnowledgeJson() {
                             }
                         ],
                         isRequired: true,
-                        name: "question8",
-                        title: "Savez-vous ce qu'est l'invité de commande ?"
-                    },
-                    {
-                        type: "radiogroup",
-                        choices: [
-                            {
-                                value: "1",
-                                text: "ipconfig"
-                            },
-                            {
-                                value: "2",
-                                text: "ifconfig"
-                            },
-                            {
-                                value: "3",
-                                text: "netconfig"
-                            },
-                            {
-                                value: "4",
-                                text: "ipaddress"
-                            }
-                        ],
-                        choicesOrder: "random",
-                        isRequired: true,
                         name: "question9",
-                        title: "Quelle est la commande pour avoir sa configuration réseau sur Windows ?",
-                        visible: false,
-                        visibleIf: "{question5} = '1'"
+                        title: "Avez-vous l'impression que les études et les métiers de l'informatique ont une bonne 'côte' aujourd'hui ?"
                     },
                     {
                         type: "radiogroup",
                         choices: [
                             {
                                 value: "1",
-                                text: "Un langage de programation"
+                                text: "De manière positive"
                             },
                             {
                                 value: "2",
-                                text: "Une marque de processeur"
+                                text: "Pas d'évolution particulière"
                             },
                             {
                                 value: "3",
-                                text: "Un anti-virus"
+                                text: "De manière négative"
                             }
                         ],
-                        choicesOrder: "random",
                         isRequired: true,
                         name: "question10",
-                        title: "Selon vous, qu'est-ce que le Powershell ?"
+                        title: "Dans quel sens diriez-vous que cette image a évoluée ?"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Remplies d'hommes"
+                            },
+                            {
+                                value: "2",
+                                text: "Avec quelques femmes"
+                            },
+                            {
+                                value: "3",
+                                text: "Parité respectée ou presque"
+                            }
+                        ],
+                        isRequired: true,
+                        name: "question11",
+                        title: "Comment imaginez-vous la répartition dans les classes d'écoles informatiques ?"
+                    },
+                    {
+                        type: "comment",
+                        name: "question12",
+                        title: "A votre avis, pourquoi ? ",
+                        visibleIf: "{question11} < 3"
                     }
-                ]
+                ],
+                name: "women"
             }
         ]
     };
-} 
+}
