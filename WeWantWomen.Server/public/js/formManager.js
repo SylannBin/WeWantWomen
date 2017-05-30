@@ -652,7 +652,7 @@ function getFormationJson()
                     colCount: 3,
                     isRequired: true,
                     name: "question1",
-                    title: "Selon vous, quelle(s) qualité(s) est utile à l’informaticien(ne) ?"
+                    title: "Selon vous, quelles qualités sont utiles à l’informaticien(ne) ?"
                 },
                 {
                     type: "radiogroup",
@@ -878,13 +878,6 @@ function getFormationJson()
                     visibleIf: " {question9} = '7'"
                 },
                 {
-                    type: "comment",
-                    name: "question16",
-                    title: "Précisez si vous le souhaitez",
-                    visible: false,
-                    visibleIf: " {question9} = '7'"
-                },
-                {
                     type: "checkbox",
                     choices: [
                         {
@@ -938,6 +931,7 @@ function getFormationJson()
                     name: "question12",
                     rows: "2",
                     title: "Précisez si vous le souhaitez",
+                    visible: false,
                     visibleIf: "{question11} = '9'"
                 },
                 {
@@ -950,10 +944,14 @@ function getFormationJson()
                         {
                             value: "2",
                             text: "Non"
+                        },
+                        {
+                            value: "3",
+                            text: "Ne se prononce pas"
                         }
                     ],
                     isRequired: true,
-                    name: "question12",
+                    name: "question13",
                     title: "Avez-vous l'impression que les études et les métiers de l'informatique ont une bonne 'côte' aujourd'hui ?"
                 },
                 {
@@ -970,10 +968,14 @@ function getFormationJson()
                         {
                             value: "3",
                             text: "De manière négative"
+                        },
+                        {
+                            value: "4",
+                            text: "Ne se prononce pas"
                         }
                     ],
                     isRequired: true,
-                    name: "question13",
+                    name: "question14",
                     title: "Dans quel sens diriez-vous que cette image a évoluée ?"
                 },
                 {
@@ -990,18 +992,55 @@ function getFormationJson()
                         {
                             value: "3",
                             text: "Parité respectée ou presque"
+                        },
+                        {
+                            value: "4",
+                            text: "Ne sait pas"
                         }
                     ],
                     isRequired: true,
-                    name: "question14",
+                    name: "question15",
                     title: "Comment imaginez-vous la répartition dans les classes d'écoles informatiques ?"
                 },
                 {
-                    type: "comment",
-                    name: "question15",
-                    rows: "2",
-                    title: "A votre avis, pourquoi ? ",
-                    visibleIf: "{question14} < 3"
+                    type: "radiogroup",
+                    choices: [
+                        {
+                            value: "1",
+                            text: "Oui"
+                        },
+                        {
+                            value: "2",
+                            text: "Non"
+                        },
+                        {
+                            value: "3",
+                            text: "Ne se prononce pas"
+                        }
+                    ],
+                    isRequired: true,
+                    name: "question16",
+                    title: "Verriez-vous d'un bon œil que l'on trouve autant de femmes que d'hommes dans le domaine Informatique (études et entreprise) ?"
+                },
+                {
+                    type: "rating",
+                    isRequired: true,
+                    maxRateDescription: "Bonne",
+                    minRateDescription: "Mauvaise",
+                    name: "question17",
+                    rateValues: [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6",
+                        "7",
+                        "8",
+                        "9",
+                        "10"
+                    ],
+                    title: "Si à l'avenir vous aviez ou connaissiez des jeunes femmes qui veulent se lancer dans des études en informatique, quelle serait votre réaction ? "
                 }
             ],
             name: "formation"
@@ -1031,51 +1070,51 @@ function getWomenJson() {
                             {
                                 value: "2",
                                 text: "Non"
-                            }
-                        ],
-                        choicesOrder: "asc",
-                        isRequired: true,
-                        name: "question1",
-                        title: "Réfléchissez-vous actuellement à votre orientation d'études ? (Poursuite ou reprise)"
-                    },
-                    {
-                        type: "checkbox",
-                        choices: [
-                            {
-                                value: "1",
-                                text: "Santé / Médical"
-                            },
-                            {
-                                value: "2",
-                                text: "Sciences"
                             },
                             {
                                 value: "3",
-                                text: "Commerce & Management"
-                            },
-                            {
-                                value: "4",
-                                text: "Informatique"
-                            },
-                            {
-                                value: "5",
-                                text: "Autre"
-                            },
-                            {
-                                value: "6",
-                                text: "Droit / Justice"
+                                text: "Ne se prononce pas"
                             }
                         ],
-                        choicesOrder: "random",
-                        name: "question2",
-                        title: "Quels sont les domaines d'études qui vous intéressent ?",
-                        visibleIf: "{question1} = '1'"
+                        isRequired: true,
+                        name: "question1",
+                        title: "Pensez-vous que les femmes ont autant leur place que les hommes dans les métiers de l'informatique"
                     },
                     {
                         type: "comment",
+                        name: "question2",
+                        rows: "2",
+                        title: "Précisez les raisons si vous le souhaitez",
+                        visible: false,
+                        visibleIf: "{question1} = '2'"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "~ 15%"
+                            },
+                            {
+                                value: "2",
+                                text: "~ 20%"
+                            },
+                            {
+                                value: "3",
+                                text: "~ 25%"
+                            },
+                            {
+                                value: "4",
+                                text: "~ 30%"
+                            },
+                            {
+                                value: "5",
+                                text: "Ne sait pas"
+                            }
+                        ],
+                        isRequired: true,
                         name: "question3",
-                        title: "Si votre choix n'est pas définitif, pour quelles raisons hésitez-vous encore ?",
-                        visibleIf: " {question2} = '4'"
+                        title: "Quelle est selon vous la proportion de femmes qui travaillent dans l'informatique ?"
                     },
                     {
                         type: "radiogroup",
@@ -1091,94 +1130,15 @@ function getWomenJson() {
                         ],
                         isRequired: true,
                         name: "question4",
-                        title: "Les filières informatiques vous ont-elles été présentées et proposées pour votre parcours de formation ? "
+                        title: "Connaissez-vous une femme 'célèbre' de par ses activités dans le domaine informatique ?"
                     },
                     {
                         type: "comment",
                         name: "question5",
-                        title: "Savez-vous pour quelles raisons ?",
-                        visibleIf: " {question4} = '2'"
-                    },
-                    {
-                        type: "checkbox",
-                        choices: [
-                            {
-                                value: "1",
-                                text: "Employabilité"
-                            },
-                            {
-                                value: "2",
-                                text: "Rémunération"
-                            },
-                            {
-                                value: "3",
-                                text: "Evolution"
-                            },
-                            {
-                                value: "4",
-                                text: "Autonomie"
-                            },
-                            {
-                                value: "5",
-                                text: "Passion"
-                            },
-                            {
-                                value: "6",
-                                text: "Autre"
-                            }
-                        ],
-                        isRequired: true,
-                        name: "question6",
-                        title: "Quels arguments et bénéfices à propos de ces filières ont été mis en avant lorsqu'on vous les as présentés ?",
-                        visibleIf: " {question4} = '1'"
-                    },
-                    {
-                        type: "comment",
-                        name: "question7",
-                        title: "Précisez",
-                        visibleIf: " {question6} = '6'"
-                    },
-                    {
-                        type: "checkbox",
-                        choices: [
-                            {
-                                value: "1",
-                                text: "Mathématiques"
-                            },
-                            {
-                                value: "2",
-                                text: "Logique"
-                            },
-                            {
-                                value: "3",
-                                text: "Francais"
-                            },
-                            {
-                                value: "4",
-                                text: "Droit"
-                            },
-                            {
-                                value: "5",
-                                text: "Anglais"
-                            },
-                            {
-                                value: "6",
-                                text: "Economie"
-                            },
-                            {
-                                value: "7",
-                                text: "Curiosité"
-                            },
-                            {
-                                value: "8",
-                                text: "Passion"
-                            }
-                        ],
-                        choicesOrder: "random",
-                        colCount: 2,
-                        isRequired: true,
-                        name: "question8",
-                        title: "A votre avis, quelles sont les disciplines ou compétences qui vous semblent indispensables pour réussir en informatique ?"
+                        rows: "2",
+                        title: "Citez-en une si vous le souhaitez",
+                        visible: false,
+                        visibleIf: "{question4} = '1'"
                     },
                     {
                         type: "radiogroup",
@@ -1193,54 +1153,145 @@ function getWomenJson() {
                             }
                         ],
                         isRequired: true,
-                        name: "question9",
-                        title: "Avez-vous l'impression que les études et les métiers de l'informatique ont une bonne 'côte' aujourd'hui ?"
+                        name: "question6",
+                        title: "Connaissez-vous un homme 'célèbre' de par ses activités dans le domaine informatique ?"
+                    },
+                    {
+                        type: "comment",
+                        name: "question7",
+                        rows: "2",
+                        title: "Citez-en un si vous le souhaitez",
+                        visible: false,
+                        visibleIf: "{question6} = '1'"
                     },
                     {
                         type: "radiogroup",
                         choices: [
                             {
                                 value: "1",
-                                text: "De manière positive"
+                                text: "Plus performante"
                             },
                             {
                                 value: "2",
-                                text: "Pas d'évolution particulière"
+                                text: "Aussi performante"
                             },
                             {
                                 value: "3",
-                                text: "De manière négative"
+                                text: "Moins performante"
+                            },
+                            {
+                                value: "4",
+                                text: "Ne se prononce pas"
                             }
                         ],
                         isRequired: true,
+                        name: "question8",
+                        title: "A votre avis, une équipe informatique mixte serait-elle plus performante qu'une équipe unisexe ?"
+                    },
+                    {
+                        type: "checkbox",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Infrastructure Système & Réseau"
+                            },
+                            {
+                                value: "2",
+                                text: "Développement "
+                            },
+                            {
+                                value: "3",
+                                text: "Coordination & Gestion projet"
+                            },
+                            {
+                                value: "4",
+                                text: "Management équipe"
+                            },
+                            {
+                                value: "5",
+                                text: "Administration Base de données"
+                            },
+                            {
+                                value: "6",
+                                text: "Expérience & Interface Utilisateur (UX/UI)"
+                            },
+                            {
+                                value: "7",
+                                text: "Autre"
+                            },
+                            {
+                                value: "8",
+                                text: "Ne se prononce pas"
+                            }
+                        ],
+                        colCount: 2,
+                        isRequired: true,
+                        name: "question9",
+                        title: "Selon vous, quels sont les domaines informatique préférés des femmes ?"
+                    },
+                    {
+                        type: "comment",
                         name: "question10",
-                        title: "Dans quel sens diriez-vous que cette image a évoluée ?"
+                        rows: "2",
+                        title: "Précisez si vous le souhaitez",
+                        visible: false,
+                        visibleIf: "{question9} = '7'"
                     },
                     {
                         type: "radiogroup",
                         choices: [
                             {
                                 value: "1",
-                                text: "Remplies d'hommes"
+                                text: "Oui"
                             },
                             {
                                 value: "2",
-                                text: "Avec quelques femmes"
+                                text: "Non"
                             },
                             {
                                 value: "3",
-                                text: "Parité respectée ou presque"
+                                text: "Ne se prononce pas"
                             }
                         ],
                         isRequired: true,
                         name: "question11",
-                        title: "Comment imaginez-vous la répartition dans les classes d'écoles informatiques ?"
+                        title: "Imaginez-vous un obstacle particulier qui empêcherait les femmes de travailler dans les métiers de l'informatique ?"
+                    },
+                    {
+                        type: "comment",
+                        name: "question14",
+                        rows: "2",
+                        title: "Précisez si vous le souhaitez",
+                        visible: false,
+                        visibleIf: "{question11} = '1'"
+                    },
+                    {
+                        type: "radiogroup",
+                        choices: [
+                            {
+                                value: "1",
+                                text: "Oui"
+                            },
+                            {
+                                value: "2",
+                                text: "Non"
+                            },
+                            {
+                                value: "3",
+                                text: "Ne se prononce pas"
+                            }
+                        ],
+                        isRequired: true,
+                        name: "question13",
+                        title: "Au contraire, avez-vous en tête une caractéristique, une qualité, ou une mentalité particulière qui aideraient les femmes à s'intégrer dans les métiers de l'informatique ?"
                     },
                     {
                         type: "comment",
                         name: "question12",
-                        title: "A votre avis, pourquoi ? ",
-                        visibleIf: "{question11} < 3"
+                        rows: "2",
+                        title: "Précisez si vous le souhaitez",
+                        visible: false,
+                        visibleIf: "{question13} = '1'"
                     }
                 ],
                 name: "women"
