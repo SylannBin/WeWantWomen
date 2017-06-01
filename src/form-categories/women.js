@@ -1,4 +1,4 @@
-const womenCategoryTitle = "Les Femmes & l'Informatique ({pageno}/{pagecount})";
+const womenCategoryTitle = "Les Femmes & l'Informatique";
 
 
 module.exports = {
@@ -21,7 +21,7 @@ function getWomen1() {
         type: "radiogroup",
         isRequired: true,
         name: "women-1",
-        title: "Pensez-vous que les femmes ont autant leur place que les hommes dans les métiers de l'informatique",
+        title: "1) Pensez-vous que les femmes ont autant leur place que les hommes dans les métiers de l'informatique",
         choices: [{
             value: "1",
             text: "Oui"
@@ -41,7 +41,7 @@ function getWomen1() {
         rows: "2",
         visibleIf: "{women-1} = '2'",
         name: "women-1-a1",
-        title: "Précisez les raisons si vous le souhaitez"
+        title: "1.1) Précisez les raisons si vous le souhaitez"
       }
     ]
   }
@@ -54,8 +54,8 @@ function getWomen2() {
     elements: [{
       type: "radiogroup",
       isRequired: true,
-      name: "question3",
-      title: "Quelle est selon vous la proportion de femmes qui travaillent dans l'informatique ?",
+      name: "women-2",
+      title: "2) Quelle est selon vous la proportion de femmes qui travaillent dans l'informatique ?",
       choices: [{
           value: "1",
           text: "~ 15%"
@@ -89,7 +89,7 @@ function getWomen3() {
         type: "radiogroup",
         isRequired: true,
         name: "women-3",
-        title: "Connaissez-vous une femme 'célèbre' de par ses activités dans le domaine informatique ?",
+        title: "3) Connaissez-vous une femme 'célèbre' de par ses activités dans le domaine informatique ?",
         choices: [{
             value: "1",
             text: "Oui"
@@ -105,7 +105,7 @@ function getWomen3() {
         rows: "2",
         visibleIf: "{women-3} = '1'",
         name: "women-3-a1",
-        title: "Citez-en une si vous le souhaitez",
+        title: "3.1) Citez-en une si vous le souhaitez",
       },
     ]
   }
@@ -119,7 +119,7 @@ function getWomen4() {
         type: "radiogroup",
         isRequired: true,
         name: "women-4",
-        title: "Connaissez-vous un homme 'célèbre' de par ses activités dans le domaine informatique ?",
+        title: "4) Connaissez-vous un homme 'célèbre' de par ses activités dans le domaine informatique ?",
         choices: [{
             value: "1",
             text: "Oui"
@@ -135,7 +135,7 @@ function getWomen4() {
         rows: "2",
         visibleIf: "{women-4} = '1'",
         name: "women-4-a1",
-        title: "Citez-en un si vous le souhaitez"
+        title: "4.1) Citez-en un si vous le souhaitez"
       }
     ]
   }
@@ -149,7 +149,7 @@ function getWomen5() {
       type: "radiogroup",
       isRequired: true,
       name: "women-5",
-      title: "A votre avis, une équipe informatique mixte serait-elle plus performante qu'une équipe unisexe ?",
+      title: "5) A votre avis, une équipe informatique mixte serait-elle plus performante qu'une équipe unisexe ?",
       choices: [{
           value: "1",
           text: "Plus performante"
@@ -180,7 +180,7 @@ function getWomen6() {
         isRequired: true,
         colCount: 2,
         name: "women-6",
-        title: "Selon vous, quels sont les domaines informatique préférés des femmes ?",
+        title: "6) Selon vous, quels sont les domaines informatique préférés des femmes ?",
         choices: [{
             value: "1",
             text: "Infrastructure Système & Réseau"
@@ -220,7 +220,7 @@ function getWomen6() {
         rows: "2",
         visibleIf: "{women-6} = '7'",
         name: "women-6-a1",
-        title: "Précisez si vous le souhaitez"
+        title: "6.1) Précisez si vous le souhaitez"
       }
     ]
   }
@@ -234,7 +234,7 @@ function getWomen7() {
         type: "radiogroup",
         isRequired: true,
         name: "women-7",
-        title: "Voyez-vous une raison qui empêche les femmes de travailler dans les métiers de l'informatique ?",
+        title: "7) Voyez-vous une raison qui empêche les femmes de travailler dans les métiers de l'informatique ?",
         choices: [{
             value: "1",
             text: "Oui"
@@ -254,7 +254,7 @@ function getWomen7() {
         rows: "2",
         visibleIf: "{women-7} = '1'",
         name: "women-7-a1",
-        title: "Précisez si vous le souhaitez"
+        title: "7.1) Précisez si vous le souhaitez"
       }
     ]
   }
@@ -268,7 +268,7 @@ function getWomen8() {
         type: "radiogroup",
         isRequired: true,
         name: "women-8",
-        title: "Au contraire, avez-vous en tête une caractéristique, une qualité, ou une mentalité particulière qui aideraient les femmes à s'intégrer dans les métiers de l'informatique ?",
+        title: "8) Au contraire, avez-vous en tête une caractéristique, une qualité, ou une mentalité particulière qui aideraient les femmes à s'intégrer dans les métiers de l'informatique ?",
         choices: [{
             value: "1",
             text: "Oui"
@@ -288,7 +288,7 @@ function getWomen8() {
         rows: "2",
         visibleIf: "{women-8} = '1'",
         name: "women-8-a1",
-        title: "Précisez si vous le souhaitez"
+        title: "8.1) Précisez si vous le souhaitez"
       }
     ]
   }
