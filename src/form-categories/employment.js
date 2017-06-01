@@ -9,7 +9,6 @@ module.exports = {
     getEmployment5,
     getEmployment6,
     getEmployment7,
-    getEmployment7a1,
     getEmployment8,
     getEmployment9,
 }
@@ -245,15 +244,8 @@ function getEmployment7() {
                 text: "Ne sais pas"
             }
             ]
-        }]
-    }
-}
-
-function getEmployment7a1() {
-    return {
-        name: "employment",
-        title: employmentCategoryTitle,
-        elements: [{
+        },
+        {
             type: "radiogroup",
             isRequired: true,
             visibleIf: "{employment-7} = '2'",
