@@ -9,6 +9,9 @@ const women = require('./form-categories/women');
 module.exports = function () {
   return {
     questionTitleTemplate: "{title}",
+    showProgressBar: "bottom",
+    goNextPageAutomatic: true,
+    showNavigationButtons: true,
     pages: [
       itCommons.getItCommons1(),
       itCommons.getItCommons2(),
@@ -31,8 +34,16 @@ module.exports = function () {
       employment.getEmployment8(),
       employment.getEmployment9(),
       formation.getFormation(),
-      women.getWomen()
-    ]
+      women.getWomen1(),
+      women.getWomen2(),
+      women.getWomen3(),
+      women.getWomen4(),
+      women.getWomen5(),
+      women.getWomen6(),
+      women.getWomen7(),
+      women.getWomen8(),
+    ],
+    completedHtml: "<div id='report-container'><h3>Merci d'avoir renseigné ce questionnaire !</h3><div id='report-stats'></div></div>"
   }
 };
 
