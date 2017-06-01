@@ -1,6 +1,6 @@
 {
   "name": "we-want-women.server",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "WeWantWomen.Server",
   "main": "server.js",
   "author": {

@@ -65,7 +65,7 @@ h5 {
 }
 
 /*#sq_page > div > div {*/
-.panel-body > div > div {
+.panel-body > div > div:not(.progress-bar) {
     background-color: aliceblue;
     margin-bottom: 1.3em;
     padding: 0 2em 1.3em;

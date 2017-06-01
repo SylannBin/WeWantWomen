@@ -28,7 +28,6 @@ function startSurvey(genre)
   // TODO?: Start timer
   userGenre = genre;
   getForm(generateForm);
-  initScrollEffect();
 }
 
 /**
@@ -36,7 +35,6 @@ function startSurvey(genre)
  */
 function changePage()
 {
-  initScrollEffect();
 }
 
 /**
