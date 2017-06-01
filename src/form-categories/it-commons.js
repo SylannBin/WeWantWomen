@@ -1,4 +1,4 @@
-const itCommonsCategoryTitle = "Généralités & Connaissances Informatiques ({pageno}/{pagecount})";
+const itCommonsCategoryTitle = "Généralités & Connaissances Informatiques";
 
 module.exports = {
   getItCommons1,
@@ -21,7 +21,7 @@ function getItCommons1() {
       type: "checkbox",
       isRequired: true,
       name: "it_commons-1",
-      title: "Selon vous, l'informatique de nos jours est plutôt ...",
+      title: "1) Selon vous, l'informatique de nos jours est plutôt ...",
       choices: [{
           value: "1",
           text: "Essentielle"
@@ -60,7 +60,7 @@ function getItCommons2() {
       type: "radiogroup",
       isRequired: true,
       name: "it_commons-2",
-      title: "Un logiciel est considéré comme libre parce que ...",
+      title: "2) Un logiciel est considéré comme libre parce que ...",
       choices: [{
           value: "1",
           text: "il est gratuit"
@@ -91,7 +91,7 @@ function getItCommons3() {
         type: "radiogroup",
         isRequired: true,
         name: "it_commons-3",
-        title: "Connaissez-vous des personnes travaillant dans le monde Informatique ?",
+        title: "3) Connaissez-vous des personnes travaillant dans le monde Informatique ?",
         choices: [{
             value: "1",
             text: "Oui"
@@ -111,13 +111,12 @@ function getItCommons3() {
         type: "panel",
         innerIndent: 2,
         name: "it_commons-3a",
-        title: "Exemple de titre de panel",
         elements: [{
           type: "radiogroup",
           isRequired: true,
           visibleIf: "{it_commons-3} = '1'",
           name: "it_commons-3-a1",
-          title: "Ces personnes sont ...",
+          title: "3.1) Ces personnes sont ...",
           choices: [{
               value: "1",
               text: "surtout des femmes"
@@ -150,7 +149,7 @@ function getItCommons4() {
       type: "radiogroup",
       isRequired: true,
       name: "it_commons-4",
-      title: "D'après vous, qu'est-ce qu'un(e) geek ?",
+      title: "4) D'après vous, qu'est-ce qu'un(e) geek ?",
       choices: [{
           value: "1",
           text: "Un informaticien"
@@ -189,7 +188,7 @@ function getItCommons5() {
       type: "radiogroup",
       isRequired: true,
       name: "it_commons-5",
-      title: "Que signifient les 3 lettres de WWW (à part We Want Women :D) ?",
+      title: "5) Que signifient les 3 lettres de WWW (à part We Want Women :D) ?",
       choices: [{
           value: "1",
           text: "World Wireless Wifi "
@@ -220,7 +219,7 @@ function getItCommons6() {
       type: "radiogroup",
       isRequired: true,
       name: "it_commons-6",
-      title: "Avez-vous déjà assemblé ou desassemblé vous-même un ordinateur ?",
+      title: "6) Avez-vous déjà assemblé ou desassemblé vous-même un ordinateur ?",
       choices: [{
           value: "1",
           text: "Oui"
@@ -242,7 +241,7 @@ function getItCommons7() {
       type: "radiogroup",
       isRequired: true,
       name: "it_commons-7",
-      title: "Diriez-vous que le monde Informatique est fréquenté par ...",
+      title: "7) Diriez-vous que le monde Informatique est fréquenté par ...",
       choices: [{
           value: "1",
           text: "des femmes en majorité"
@@ -273,7 +272,7 @@ function getItCommons8() {
       type: "radiogroup",
       isRequired: true,
       name: "it_commons-8",
-      title: "Qu'est-ce qu'un RansomWare ?",
+      title: "8) Qu'est-ce qu'un RansomWare ?",
       choices: [{
           value: "1",
           text: "Un type de jeu à la mode"
@@ -308,7 +307,7 @@ function getItCommons9() {
       type: "radiogroup",
       isRequired: true,
       name: "it_commons-9",
-      title: "Que sont HTML, JAVA, PYTHON, PHP ou C# ?",
+      title: "9) Que sont HTML, JAVA, PYTHON, PHP ou C# ?",
       choices: [{
           value: "1",
           text: "Des Pokemon de 6ème génération"

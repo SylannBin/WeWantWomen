@@ -32,7 +32,6 @@ module.exports = function () {
       employment.getEmployment7(),
       employment.getEmployment8(),
       employment.getEmployment9(),
-      formation.getFormation(),
       formation.getFormation1(),
       formation.getFormation2(),
       formation.getFormation3(),
