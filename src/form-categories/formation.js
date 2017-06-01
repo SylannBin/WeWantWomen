@@ -460,7 +460,7 @@ function getFormation8() {
             type: "radiogroup",
             isRequired: true,
             name: "formation-8",
-            title: "8) Verriez-vous d'un bon œil que l'on trouve autant de femmes que d'hommes dans le domaine Informatique (études et entreprise) ?",
+            title: "8) Verriez-vous d'un bon œil que l'on trouve autant de femmes que d'hommes dans le domaine informatique (études et entreprise) ?",
             choices: [{
                     value: "oui",
                     text: "Oui"
