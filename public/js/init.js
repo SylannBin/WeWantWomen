@@ -20,12 +20,31 @@ $("#select-genre-n").on('click', function () { startSurvey("n") });
 // Functions
 
 /**
- * 
+ * Starts the survey, initializes the logic of a complete survey
  * @param {string} genre (possible values: "m", "f", "n"")
  */
 function startSurvey(genre)
 {
+  // TODO?: Start timer
   userGenre = genre;
-  generateForm();
+  getForm(generateForm);
   initScrollEffect();
+}
+
+/**
+ * Logic to execute when page switch event is fired
+ */
+function changePage()
+{
+  initScrollEffect();
+}
+
+/**
+ * Logic to execute when form is finished
+ */
+function endSurvey()
+{
+  sendForm()
+  // TODO?: End timer (see startSurvey) + display time
+  // TODO: display comparison between user answers and actual answers (specific questions only)
 }

@@ -1,15 +1,11 @@
-﻿var Helper = require('../Helper');
-
-
-module.exports = IndexAction;
-
+﻿var Helper = require('../src/helper');
 
 /**
  * Default route
  *
  * @route /
  */
-function IndexAction(req, res)
+module.exports = function(req, res)
 {
   Helper.appLogger(`New connection`);
   res.status(200).json({ message: "We Want Women!\n" });

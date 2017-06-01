@@ -68,7 +68,7 @@ h5 {
 .panel-body > div > div {
     background-color: aliceblue;
     margin-bottom: 1.3em;
-    padding: 0 2em;
+    padding: 0 2em 1.3em;
     border-bottom: 3px #2c3e50;
     border-bottom-style: solid;
 }

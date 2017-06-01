@@ -1,4 +1,19 @@
 ﻿/**
+ * Retrive the form from the server and continue with the result
+ * @param {function} callback
+ */
+function getForm(callback)
+{
+    $.ajax({
+    type: "GET",
+    url: "/model",
+    dataType: "json",
+    success: data => callback(data),
+    error: data => handleError(data)
+  });
+}
+
+/**
  * Sends the form with the user answers to the server
  *
  * @global {jsonObject} survey

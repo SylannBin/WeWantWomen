@@ -4,8 +4,9 @@ var path       = require('path');
 var favicon    = require('serve-favicon');
 var bodyParser = require('body-parser');
 var express    = require('express');
-var Index      = require('./routes/Index');
-var Formulaire = require('./routes/Formulaire');
+var Index      = require('./routes/index');
+var Model      = require('./routes/model');
+var Formulaire = require('./routes/formulaire');
 
 var app = express();
 
@@ -16,6 +17,7 @@ app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.png')));
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.get("/", Index);
+app.get("/model", Model);
 app.post("/formulaire", Formulaire);
 
 // Server listen and log

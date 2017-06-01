@@ -1,6 +1,6 @@
 ﻿var jsonDb = require('node-json-db');
 var path = require('path');
-var Helper = require('./Helper');
+var Helper = require('./helper');
 
 
 module.exports = {

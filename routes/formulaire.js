@@ -1,9 +1,5 @@
-﻿var Helper = require('../Helper');
-var DbManager = require('../DbManager');
-
-
-module.exports = PostFormulaireAction;
-
+﻿var Helper = require('../src/helper');
+var DbManager = require('../src/db-manager');
 
 /**
  * Route used when sending a formulaire
@@ -13,7 +9,7 @@ module.exports = PostFormulaireAction;
  * @body {string} formResponse.userGenre
  * @body {jsonString} formResponse.content
  */
-function PostFormulaireAction(req, res)
+module.exports = function(req, res)
 {
   Helper.appLogger(`New form response`);
 
