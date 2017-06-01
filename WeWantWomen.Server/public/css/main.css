@@ -4,7 +4,7 @@
 }
 
 #survey-container {
-    margin-top: 40px;
+    margin-top: 60px;
     box-shadow: 10px 10px 150px grey;
 }
 
@@ -51,7 +51,9 @@ h5 {
 }
 
 .logo {
-    height: 60vh;
+    max-height: 60vh;
+    max-width: 60vw;
+    height: auto;
     width: auto;
     margin-bottom: 1em;
 }
@@ -62,10 +64,11 @@ h5 {
     margin: 0.3em;
 }
 
+/*#sq_page > div > div {*/
 .panel-body > div > div {
-    margin-bottom: 2em;
+    background-color: aliceblue;
+    margin-bottom: 1.3em;
+    padding: 0 2em;
     border-bottom: 3px #2c3e50;
     border-bottom-style: solid;
-    padding-bottom: 1em;
 }
-

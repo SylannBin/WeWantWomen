@@ -10,17 +10,16 @@ module.exports = PostFormulaireAction;
  *
  * @route /formulaire
  *
- * @body {string} formResponse.category
+ * @body {string} formResponse.userGenre
  * @body {jsonString} formResponse.content
  */
 function PostFormulaireAction(req, res)
 {
-  Helper.appLogger(`New ${req.body.formResponse.category} Form`);
+  Helper.appLogger(`New form response`);
 
   // Check existence of important data
   if (!req.body
     || !req.body.formResponse
-    || !req.body.formResponse.category
     || !req.body.formResponse.content
     || !req.body.formResponse.userGenre)
   {
@@ -29,11 +28,8 @@ function PostFormulaireAction(req, res)
     return;
   }
 
-  // category of the response among [employment, formation and it-commons]
-  var category = req.body.formResponse.category;
-
-  // get number of entries for this category
-  var count = DbManager.getEntryCount(category);
+  // get number of entries
+  var count = DbManager.getEntryCount();
 
   // Encapsulate data under store format
   var data = {
@@ -43,6 +39,6 @@ function PostFormulaireAction(req, res)
   };
 
   // update database
-  DbManager.update(category, count, data);
+  DbManager.update(count, data);
   res.status(200).json({ message: "Réponse prise en compte !" });
 }

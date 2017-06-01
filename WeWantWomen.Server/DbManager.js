@@ -33,24 +33,23 @@ function getDatabase(fileName)
 }
 
 /**
- * Gets the number of items in the category storage
- * Adds the property to the category if its not yet present
- * @param {string} category
+ * Gets the number of items in the storage
+ * Adds the property if its not yet present
  * @returns {int} count
  */
-function getEntryCount(category)
+function getEntryCount()
 {
   var count = 1;
   try
   {
-    count = db.getData(`/${category}/count`);
+    count = db.getData(`/count`);
     count++;
   }
   catch (e)
   {
     dbLogger(`Error: [${e.id}] ${e.message}`);
     dbLogger("Action: Setting count to 1...");
-    db.push(`/${category}/count`, 1);
+    db.push(`/count`, 1);
   }
   finally
   {
@@ -60,17 +59,16 @@ function getEntryCount(category)
 
 /**
  * Updates the database with the provided parameters
- * @param {string} category
  * @param {int} count
  * @param {object} data
  */
-function update(category, count, data)
+function update(count, data)
 {
   // log
-  dbLogger(`New entry in ${category} (index:${count})`);
+  dbLogger(`New entry (index:${count})`);
   // update
-  db.push(`/${category}/count`, count, true);
-  db.push(`/${category}/data[]`, data, true);
+  db.push(`/count`, count, true);
+  db.push(`/data[]`, data, true);
 }
 
 /**
