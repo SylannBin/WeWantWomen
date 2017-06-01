@@ -1,4 +1,4 @@
-const formationCategoryTitle = "Formation & Orientation";
+const formationCategoryTitle = "Formation et orientation (3/4)";
 
 
 module.exports = {
@@ -69,7 +69,7 @@ function getFormation1() {
                     text: "Créativité"
                 },
                 {
-                    value: "12",
+                    value: "autre",
                     text: "Autre"
                 }
             ]
@@ -87,16 +87,16 @@ function getFormation2() {
                 name: "formation-2",
                 title: "2) Réfléchissez-vous actuellement à votre orientation d'études ? (Poursuite ou reprise)",
                 choices: [{
-                        value: "1",
+                        value: "oui",
                         text: "Oui"
                     },
                     {
-                        value: "2",
+                        value: "non",
                         text: "Non"
                     },
                     {
-                        value: "3",
-                        text: "Ne se prononce pas"
+                        value: "jnspr",
+                        text: "(Je ne souhaite pas répondre)"
                     }
                 ]
             },
@@ -104,7 +104,7 @@ function getFormation2() {
                 type: "checkbox",
                 isRequired: true,
                 colCount: 2,
-                visibleIf: "{formation-2} = '1'",
+                visibleIf: "{formation-2} = 'oui'",
                 name: "formation-2-a1",
                 title: "2.1) Quels sont les domaines d'études qui vous intéressent ?",
                 choices: [{
@@ -128,12 +128,12 @@ function getFormation2() {
                         text: "Droit / Justice"
                     },
                     {
-                        value: "5",
+                        value: "autre",
                         text: "Autre"
                     },
                     {
-                        value: "7",
-                        text: "Ne se prononce pas"
+                        value: "jnspr",
+                        text: "(Je ne souhaite pas répondre)"
                     }
                 ]
             },
@@ -168,19 +168,19 @@ function getFormation2() {
                         text: "Pas les capacités"
                     },
                     {
-                        value: "7",
+                        value: "autre",
                         text: "Autre"
                     },
                     {
-                        value: "8",
-                        text: "Ne se prononce pas"
+                        value: "jnspr",
+                        text: "(Je ne souhaite pas répondre)"
                     }
                 ]
             },
             {
                 type: "comment",
                 rows: "2",
-                visibleIf: "{formation-2-a2} = '7'",
+                visibleIf: "{formation-2-a2} = 'autre'",
                 name: "formation-2-a3",
                 title: "2.3) Précisez si vous le souhaitez"
             }
@@ -198,16 +198,16 @@ function getFormation3() {
                 name: "formation-3",
                 title: "3) Les filières informatiques vous ont-elles été présentées et proposées lors de votre parcours de formation ?",
                 choices: [{
-                        value: "1",
+                        value: "oui",
                         text: "Oui"
                     },
                     {
-                        value: "2",
+                        value: "non",
                         text: "Non"
                     },
                     {
-                        value: "3",
-                        text: "Ne se souvient pas"
+                        value: "jnsp",
+                        text: "(Je ne sais plus)"
                     }
                 ]
             },
@@ -215,7 +215,7 @@ function getFormation3() {
                 type: "checkbox",
                 isRequired: true,
                 colCount: 2,
-                visibleIf: "{formation-3} = '2'",
+                visibleIf: "{formation-3} = 'non'",
                 name: "formation-3-a1",
                 title: "3.1) Savez-vous pour quelles raisons ?",
                 choices: [{
@@ -235,19 +235,19 @@ function getFormation3() {
                         text: "Orientation qui ne vous convient pas"
                     },
                     {
-                        value: "5",
+                        value: "autre",
                         text: "Autre"
                     },
                     {
-                        value: "6",
-                        text: "Ne se souvient pas"
+                        value: "jnsp",
+                        text: "(Je ne sais pas)"
                     }
                 ]
             },
             {
                 type: "comment",
                 rows: "2",
-                visibleIf: "{formation-3-a1} = '5'",
+                visibleIf: "{formation-3-a1} = 'autre'",
                 name: "formation-3-a2",
                 title: "3.2) Précisez si vous le souhaitez"
             },
@@ -255,7 +255,7 @@ function getFormation3() {
                 type: "checkbox",
                 isRequired: true,
                 colCount: 2,
-                visibleIf: "{formation-3} = '1'",
+                visibleIf: "{formation-3} = 'oui'",
                 name: "formation-3-b1",
                 title: "3.1) Quels arguments et bénéfices à propos de ces filières ont été mis en avant lorsqu'on vous les as présentés ?",
                 choices: [{
@@ -283,19 +283,19 @@ function getFormation3() {
                         text: "Avenir"
                     },
                     {
-                        value: "7",
+                        value: "autre",
                         text: "Autre"
                     },
                     {
-                        value: "8",
-                        text: "Ne se souvient pas"
+                        value: "jnsp",
+                        text: "Je ne sais plus"
                     }
                 ]
             },
             {
                 type: "comment",
                 rows: "2",
-                visibleIf: "{formation-3-b1} = '7'",
+                visibleIf: "{formation-3-b1} = 'autre'",
                 name: "formation-3-b2",
                 title: "3.2) Précisez si vous le souhaitez"
             }
@@ -346,19 +346,19 @@ function getFormation4() {
                         text: "Passion"
                     },
                     {
-                        value: "9",
+                        value: "autre",
                         text: "Autre"
                     },
                     {
-                        value: "10",
-                        text: "Ne sait pas"
+                        value: "jnsp",
+                        text: "(Je ne sais pas)"
                     }
                 ]
             },
             {
                 type: "comment",
                 rows: "2",
-                visibleIf: "{formation-4} = '9'",
+                visibleIf: "{formation-4} = 'autre'",
                 name: "formation-4-a1",
                 title: "4.1) Précisez si vous le souhaitez"
             }
@@ -376,16 +376,16 @@ function getFormation5() {
             name: "formation-5",
             title: "5) Avez-vous l'impression que les études et les métiers de l'informatique ont une bonne 'cote' aujourd'hui ?",
             choices: [{
-                    value: "1",
+                    value: "oui",
                     text: "Oui"
                 },
                 {
-                    value: "2",
+                    value: "non",
                     text: "Non"
                 },
                 {
-                    value: "3",
-                    text: "Ne se prononce pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
             ]
         }]
@@ -414,8 +414,8 @@ function getFormation6() {
                     text: "De manière négative"
                 },
                 {
-                    value: "4",
-                    text: "Ne se prononce pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
             ]
         }]
@@ -444,8 +444,8 @@ function getFormation7() {
                     text: "Parité respectée ou presque"
                 },
                 {
-                    value: "4",
-                    text: "Ne sait pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
             ]
         }]
@@ -462,16 +462,20 @@ function getFormation8() {
             name: "formation-8",
             title: "8) Verriez-vous d'un bon œil que l'on trouve autant de femmes que d'hommes dans le domaine Informatique (études et entreprise) ?",
             choices: [{
-                    value: "1",
+                    value: "oui",
                     text: "Oui"
                 },
                 {
-                    value: "2",
+                    value: "non",
                     text: "Non"
                 },
                 {
-                    value: "3",
-                    text: "Ne se prononce pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
+                },
+                {
+                    value: "jnspr",
+                    text: "(Je ne souhaite pas répondre)"
                 }
             ]
         }]

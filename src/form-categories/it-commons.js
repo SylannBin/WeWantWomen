@@ -1,4 +1,4 @@
-const itCommonsCategoryTitle = "Généralités & Connaissances Informatiques";
+const itCommonsCategoryTitle = "Généralités et connaissances informatiques (1/4)";
 
 module.exports = {
   getItCommons1,
@@ -43,11 +43,10 @@ function getItCommons1() {
           text: "Passionnante"
         },
         {
-          value: "6",
-          text: "Ne se prononce pas"
+          value: "jnsp",
+          text: "(Je ne sais pas)"
         }
-      ],
-      choicesOrder: "random"
+      ]
     }]
   }
 }
@@ -74,11 +73,10 @@ function getItCommons2() {
           text: "son code est consultable publiquement et il peut être récupéré et modifié"
         },
         {
-          value: "4",
-          text: "Ne sait pas"
+          value: "jnsp",
+          text: "(Je ne sais pas)"
         }
-      ],
-      choicesOrder: "random"
+      ]
     }]
   }
 }
@@ -91,55 +89,45 @@ function getItCommons3() {
         type: "radiogroup",
         isRequired: true,
         name: "it_commons-3",
-        title: "3) Connaissez-vous des personnes travaillant dans le monde Informatique ?",
+        title: "3) Connaissez-vous des personnes travaillant dans le secteur informatique ?",
         choices: [{
-            value: "1",
+            value: "oui",
             text: "Oui"
           },
           {
-            value: "2",
+            value: "non",
             text: "Non"
           },
           {
-            value: "3",
-            text: "Ne se prononce pas"
+            value: "jnspr",
+            text: "(Je ne souhaite pas répondre)"
           }
-        ],
-        choicesOrder: "random"
+        ]
       },
       {
-        type: "panel",
-        innerIndent: 2,
-        name: "it_commons-3a",
-        elements: [{
-          type: "radiogroup",
-          isRequired: true,
-          visibleIf: "{it_commons-3} = '1'",
-          name: "it_commons-3-a1",
-          title: "3.1) Ces personnes sont ...",
-          choices: [{
-              value: "1",
-              text: "surtout des femmes"
-            },
-            {
-              value: "2",
-              text: "surtout des hommes"
-            },
-            {
-              value: "3",
-              text: "des femmes et des hommes"
-            },
-            {
-              value: "4",
-              text: "Ne se prononce pas"
-            }
-          ],
-          choicesOrder: "random"
-        }]
+        type: "radiogroup",
+        isRequired: true,
+        visibleIf: "{it_commons-3} = 'oui'",
+        name: "it_commons-3-a1",
+        title: "3.1) Ces personnes sont ...",
+        choices: [{
+            value: "1",
+            text: "surtout des femmes"
+          },
+          {
+            value: "2",
+            text: "surtout des hommes"
+          },
+          {
+            value: "3",
+            text: "des femmes et des hommes"
+          }
+        ]
       }
     ]
   }
 }
+
 
 function getItCommons4() {
   return {
@@ -171,11 +159,10 @@ function getItCommons4() {
           text: "Une personne renfermée dans son monde"
         },
         {
-          value: "6",
-          text: "Ne se prononce pas"
+          value: "jnsp",
+          text: "(Je ne sais pas)"
         }
-      ],
-      choicesOrder: "random"
+      ]
     }]
   }
 }
@@ -202,11 +189,10 @@ function getItCommons5() {
           text: "Wireless Web Widget"
         },
         {
-          value: "4",
-          text: "Ne sait pas"
+          value: "jnsp",
+          text: "(Je ne sais pas)"
         }
-      ],
-      choicesOrder: "random"
+      ]
     }]
   }
 }
@@ -221,11 +207,11 @@ function getItCommons6() {
       name: "it_commons-6",
       title: "6) Avez-vous déjà assemblé ou desassemblé vous-même un ordinateur ?",
       choices: [{
-          value: "1",
+          value: "oui",
           text: "Oui"
         },
         {
-          value: "2",
+          value: "non",
           text: "Non"
         }
       ]
@@ -241,7 +227,7 @@ function getItCommons7() {
       type: "radiogroup",
       isRequired: true,
       name: "it_commons-7",
-      title: "7) Diriez-vous que le monde Informatique est fréquenté par ...",
+      title: "7) Selon vous, le secteur informatique est fréquenté par ...",
       choices: [{
           value: "1",
           text: "des femmes en majorité"
@@ -255,11 +241,10 @@ function getItCommons7() {
           text: "autant de femmes que d'hommes"
         },
         {
-          value: "4",
-          text: "Ne se prononce pas"
+          value: "jnsp",
+          text: "(Je ne sais pas)"
         }
-      ],
-      choicesOrder: "random"
+      ]
     }]
   }
 }
@@ -290,11 +275,10 @@ function getItCommons8() {
           text: "Un moyen de communication entre les forces de police et les kidnappeurs"
         },
         {
-          value: "5",
-          text: "Ne sait pas"
+          value: "jnsp",
+          text: "(Je ne sais pas)"
         }
-      ],
-      choicesOrder: "random"
+      ]
     }]
   }
 }
@@ -325,11 +309,10 @@ function getItCommons9() {
           text: "Des langages de cryptologie utilisés en sécurité informatique"
         },
         {
-          value: "5",
-          text: "Ne sait pas"
+          value: "jnsp",
+          text: "(Je ne sais pas)"
         }
-      ],
-      choicesOrder: "random"
+      ]
     }]
   }
 }

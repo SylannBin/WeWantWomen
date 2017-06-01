@@ -9,7 +9,7 @@ const women = require('./form-categories/women');
 module.exports = function () {
   return {
     questionTitleTemplate: "{title}",
-    showProgressBar: "bottom",
+    showProgressBar: "top",
     goNextPageAutomatic: true,
     showNavigationButtons: true,
     pages: [

@@ -1,6 +1,7 @@
 ﻿// Set cssType for survey module
 Survey.Survey.cssType = "bootstrap";
 Survey.defaultBootstrapCss.navigationButton = "btn btn-primary";
+Survey.surveyLocalization.locales["fr"].progressText = " ";
 
 // Content of the form (set by json functions)
 // (Has to be named like this to be found by the Survey module!)
@@ -35,6 +36,12 @@ function startSurvey(genre)
  */
 function changePage()
 {
+  $("#survey-container > div > div > div > div").each(function(i, el) {
+    var el = $(el);
+    var newone = el.clone(true);
+    el.before(newone);
+    $("." + el.attr("class") + ":last").remove();
+  });
 }
 
 /**

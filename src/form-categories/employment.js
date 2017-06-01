@@ -1,4 +1,4 @@
-const employmentCategoryTitle = "Employabilité & Rémunération";
+const employmentCategoryTitle = "Employabilité et rémunération (2/4)";
 
 
 module.exports = {
@@ -40,11 +40,10 @@ function getEmployment1() {
                     text: "+ de 190 000"
                 },
                 {
-                    value: "nsp",
-                    text: "Ne sait pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
-            ],
-            choicesOrder: "random"
+            ]
         }]
     }
 }
@@ -71,8 +70,8 @@ function getEmployment2() {
                     text: "importante"
                 },
                 {
-                    value: "nsp",
-                    text: "Ne sais pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
             ],
             rows: [{
@@ -118,11 +117,10 @@ function getEmployment3() {
                     text: "33%"
                 },
                 {
-                    value: "nsp",
-                    text: "Ne sait pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
-            ],
-            choicesOrder: "random"
+            ]
         }]
     }
 }
@@ -149,11 +147,10 @@ function getEmployment4() {
                     text: "Diminution"
                 },
                 {
-                    value: "nsp",
-                    text: "Ne sait pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
-            ],
-            choicesOrder: "random"
+            ]
         }]
     }
 }
@@ -184,8 +181,8 @@ function getEmployment5() {
                     text: "Plus de 40 000€"
                 },
                 {
-                    value: "nsp",
-                    text: "Ne sait pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
             ]
         }]
@@ -214,8 +211,8 @@ function getEmployment6() {
                     text: "plus faible"
                 },
                 {
-                    value: "nsp",
-                    text: "Ne sais pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
             ]
         }]
@@ -240,15 +237,15 @@ function getEmployment7() {
                         text: "Non"
                     },
                     {
-                        value: "nsp",
-                        text: "Ne sais pas"
+                        value: "jnsp",
+                        text: "(Je ne sais pas)"
                     }
                 ]
             },
             {
                 type: "radiogroup",
                 isRequired: true,
-                visibleIf: "{employment-7} = '2'",
+                visibleIf: "{employment-7} = 'non'",
                 name: "employment-7-a1",
                 title: "Selon vous pour des raisons liées au domaine informatique ?",
                 choices: [{
@@ -260,8 +257,8 @@ function getEmployment7() {
                         text: "Non"
                     },
                     {
-                        value: "nsp",
-                        text: "Ne sais pas"
+                        value: "jnsp",
+                        text: "(Je ne sais pas)"
                     }
                 ]
             }
@@ -277,7 +274,7 @@ function getEmployment8() {
             type: "radiogroup",
             isRequired: true,
             name: "employment-8",
-            title: "8) A votre avis, quel est le secteur qui offre a ce jour le plus d’employabilité ?",
+            title: "8) A votre avis, quel est le secteur qui offre à ce jour le plus d’employabilité ?",
             choices: [{
                     value: "1",
                     text: "Médical"
@@ -295,12 +292,12 @@ function getEmployment8() {
                     text: "Commercial"
                 },
                 {
-                    value: "5",
+                    value: "autre",
                     text: "Autre"
                 },
                 {
-                    value: "6",
-                    text: "Ne se prononce pas"
+                    value: "jnsp",
+                    text: "(Je ne sais pas)"
                 }
             ]
         }]
@@ -323,10 +320,6 @@ function getEmployment9() {
                 {
                     value: "faux",
                     text: "Faux"
-                },
-                {
-                    value: "nsp",
-                    text: "Ne sait pas"
                 }
             ]
         }]
