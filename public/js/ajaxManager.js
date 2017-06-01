@@ -44,10 +44,10 @@ function sendForm()
 
 function handleSuccess(data)
 {
-  console.log(data)
+  console.log("Success, data received: ", data)
 }
 
 function handleError(data)
 {
-  console.log(`Error, data returned: ${data}`)
+  console.log("Error, data returned: ", data)
 }
