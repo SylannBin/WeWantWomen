@@ -20,7 +20,16 @@ module.exports = function () {
       itCommons.getItCommons7(),
       itCommons.getItCommons8(),
       itCommons.getItCommons9(),
-      employment.getEmployment(),
+      employment.getEmployment1(),
+      employment.getEmployment2(),
+      employment.getEmployment3(),
+      employment.getEmployment4(),
+      employment.getEmployment5(),
+      employment.getEmployment6(),
+      employment.getEmployment7(),
+      employment.getEmployment7a1(),
+      employment.getEmployment8(),
+      employment.getEmployment9(),
       formation.getFormation(),
       women.getWomen()
     ]
