@@ -12,7 +12,7 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.png')));
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 
