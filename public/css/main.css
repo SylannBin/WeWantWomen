@@ -44,6 +44,11 @@ h5 {
     height: 40px;
 }
 
+.navbar-header > span > img {
+    height: 40px;
+    width: auto;
+}
+
 .presentation {
     width: 90%;
     margin: 80px auto 0;
