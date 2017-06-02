@@ -31,7 +31,17 @@ h4 {
 h5 {
     font-weight: 600;
     font-style: italic;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.navbar {
+    min-height: 40px;
+}
+
+.navbar-brand{
+    padding: 10px 15px;
+    height: 40px;
 }
 
 .presentation {
@@ -96,7 +106,7 @@ h5 {
 
 #footer {
     width: 100%;
-    height: 100px;
+    height: 70px;
     padding: 1em;
     background: #333;
     border-top: solid 3px #666;
